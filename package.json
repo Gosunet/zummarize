@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "start": "functions-framework --target=zummarizeFunction"
   }
 }
