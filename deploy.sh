@@ -1,4 +1,8 @@
-gcloud functions deploy zummarize-function \
-	--region=europe-west1 \
-	--runtime=nodejs18 \
-	--trigger-http
+gcloud functions deploy zummarizefunction \
+--gen2 \
+--runtime=nodejs18 \
+--region=europe-west1 \
+--source=functions/ \
+--entry-point=zummarizefunction \
+--trigger-http \
+--allow-unauthenticated
