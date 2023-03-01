@@ -18,6 +18,7 @@
         "sourceMap": false,
         "outDir": "functions",
         "noImplicitReturns": true,
+        "esModuleInterop": true
     },
     "typeRoots": [
         "node_modules/@types"
