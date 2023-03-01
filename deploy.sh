@@ -5,4 +5,6 @@ gcloud functions deploy zummarizefunction \
 --source=functions/ \
 --entry-point=zummarizefunction \
 --trigger-http \
---allow-unauthenticated
+--allow-unauthenticated \
+--env-vars-file .env.yaml \
+--memory 1Gi

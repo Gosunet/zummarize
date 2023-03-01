@@ -1,24 +1,20 @@
 import { Request, Response } from 'express'
 import { EnvelopedEvent, ReactionAddedEvent } from '@slack/bolt'
 import { Configuration, OpenAIApi } from 'openai'
+import { JSDOM } from 'jsdom'
 
 // Require the Node Slack SDK package (github.com/slackapi/node-slack-sdk)
-import {
-  WebClient,
-  LogLevel,
-  ConversationsHistoryResponse,
-} from '@slack/web-api'
+import { WebClient, LogLevel } from '@slack/web-api'
 
-type GetElementFromArray<T> = T extends Array<infer I> ? I : never
 type Challenge = string
 
 declare global {
-    namespace NodeJS {
-        interface ProcessEnv {
-            SLACK_TOKEN: string
-            OPENAI_API_KEY: string
-        }
+  namespace NodeJS {
+    interface ProcessEnv {
+      SLACK_TOKEN: string
+      OPENAI_API_KEY: string
     }
+  }
 }
 
 const configuration = new Configuration({
@@ -28,10 +24,16 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration)
 
 export async function zummarizefunction(
-  req: Request<never, Challenge, EnvelopedEvent<ReactionAddedEvent>>,
+  req: Request<never, void, EnvelopedEvent<ReactionAddedEvent>>,
   res: Response,
 ) {
-  console.log(req.body)
+  console.log(JSON.stringify(req.body))
+  res.send(req.body.challenge)
+
+  if (req.body.event.reaction !== 'robot_face') {
+    // return
+    throw new Error(`Not good event : ${req.body.event.reaction}`)
+  }
 
   const token = process.env.SLACK_TOKEN
 
@@ -69,27 +71,71 @@ export async function zummarizefunction(
     }
   }
 
+  if (req.body.event.item.type !== 'message') {
+    throw new Error('Not a Message')
+  }
+
   // Fetch message using a channel ID and message TS
   const message = await fetchMessage(
     req.body.event.item.channel,
-    req.body.event.event_ts,
+    req.body.event.item.ts,
   )
+  console.log('message récupéré de slack')
+
+  const urls = message?.match(
+    /(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/,
+  )
+  if (!urls?.length) {
+    throw new Error('No URL founded')
+  }
+  const url = urls[0]
+  console.log('url match:', url)
+
+  const content = await fetch(url).then((r) => r.text())
+  console.log('Content get from URL ')
+  let article: string
+  if (url.match('medium')) {
+    article = parseMediumArticle(content)
+  } else if (url.match('dev.to')) {
+    article = parseDevToArticle(content)
+  } else {
+    throw new Error('not implemented ' + url)
+  }
+  console.log('Article get from content ')
 
   const openAiResult = await openai.createCompletion({
-    model: 'code-davinci-002',
-    prompt:
-      'Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article : ' +
-      message,
-    temperature: 0,
-    max_tokens: 60,
-    top_p: 1.0,
-    frequency_penalty: 0.5,
-    presence_penalty: 0.0,
-    stop: ['You:'],
+    model: 'text-davinci-003',
+    prompt: `Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${article}"`,
+    temperature: 0.7,
+    max_tokens: 144,
+    // stop: ['You:'],
   })
 
-  console.log(openAiResult)
+  const openApiMessage = openAiResult.data.choices.pop()
+  console.log('OPEN AI RESPONSE : ' + JSON.stringify(openApiMessage?.text))
 
+  await client.chat.postMessage({
+    channel: req.body.event.item.channel,
+    thread_ts: req.body.event.item.ts,
+    text: openApiMessage?.text,
+  })
   // Send an HTTP response
-  res.send(req.body.challenge)
+}
+
+function parseDevToArticle(htmlAsString: string) {
+  return parseArticle(htmlAsString, 'article > div > div > p')
+}
+
+function parseMediumArticle(htmlAsString: string) {
+  return parseArticle(htmlAsString, 'section > div > div > p')
+}
+
+function parseArticle(htmlAsString: string, querySelector: string) {
+  const dom = new JSDOM(htmlAsString)
+  // dom.window.document.querySelector("p")?.textContent; // 'Hello world'
+  // const document = new DOMParser().parseFromString(htmlAsString, "text/html")
+  const document = dom.window.document
+  return Array.from(document.querySelectorAll(querySelector))
+    .map((b) => b.innerHTML.replace(/<[^>]*>/g, ''))
+    .join()
 }
