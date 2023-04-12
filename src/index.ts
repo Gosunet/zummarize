@@ -1,7 +1,11 @@
 import { Request, Response } from 'express'
 import { EnvelopedEvent, ReactionAddedEvent } from '@slack/bolt'
 import { Configuration, OpenAIApi } from 'openai'
-import { parseDevToArticle, parseMediumArticle, parseUnknownArticle } from "./parseArticle";
+import {
+  parseDevToArticle,
+  parseMediumArticle,
+  parseUnknownArticle,
+} from './parseArticle'
 // Require the Node Slack SDK package (github.com/slackapi/node-slack-sdk)
 import { WebClient, LogLevel } from '@slack/web-api'
 
@@ -20,16 +24,12 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration)
 
-export async function zummarizefunction(
+export async function computearticle(
   req: Request<never, void, EnvelopedEvent<ReactionAddedEvent>>,
   res: Response,
 ) {
-  console.log(JSON.stringify(req.body))
-  res.send(req.body.challenge)
-
   if (req.body.event.reaction !== 'robot_face') {
-    // return
-    throw new Error(`Not good event : ${req.body.event.reaction}`)
+    return
   }
 
   const token = process.env.SLACK_TOKEN
@@ -63,13 +63,13 @@ export async function zummarizefunction(
       return result.messages[0].text
       // Print message text
     } catch (error) {
-      console.error(error)
+      console.error(error, req.body.event.event_ts)
       throw error
     }
   }
 
   if (req.body.event.item.type !== 'message') {
-    throw new Error('Not a Message')
+    throw new Error(`${req.body.event.event_ts} Not a Message`)
   }
 
   // Fetch message using a channel ID and message TS
@@ -98,25 +98,49 @@ export async function zummarizefunction(
   } else {
     article = parseUnknownArticle(content)
   }
-  console.log('Article get from content ')
+  console.log('Article get from content ', req.body.event.event_ts)
 
   const openAiResult = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     messages: [
-      {"role": "system", "content": "Tu es un développeur confirmé."},
-      {"role": "user", "content": ` Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${article}"`},
+      { role: 'system', content: 'Tu es un développeur confirmé. Et tu écris des tweets résumant ta veille technologique. Tu utilises des emojis.' },
+      {
+        role: 'user',
+        content: `Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${article}"`
+          .replace(/\s+/gm, ' ')
+          .split(' ')
+          .slice(0, 2323)
+          .join(' '),
+      },
     ],
-    temperature: 0.7
-    // stop: ['You:'],
+    temperature: 0.7,
   })
 
   const openApiMessage = openAiResult.data.choices.pop()
-  console.log('OPEN AI RESPONSE : ' + JSON.stringify(openApiMessage?.message?.content))
+  console.log(
+    req.body.event.event_ts,
+    'OPEN AI RESPONSE : ' + JSON.stringify(openApiMessage?.message?.content),
+  )
 
   await client.chat.postMessage({
     channel: req.body.event.item.channel,
     thread_ts: req.body.event.item.ts,
     text: openApiMessage?.message?.content,
   })
-  // Send an HTTP response
+}
+
+export async function zummarizefunction(
+  req: Request<never, void, EnvelopedEvent<ReactionAddedEvent>>,
+  res: Response,
+) {
+  console.log(JSON.stringify(req.body))
+  const p = fetch(`https://europe-west1-zummarize-brest.cloudfunctions.net/computearticle`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(req.body),
+  })
+  res.send(req.body.challenge)
+  await p
 }
