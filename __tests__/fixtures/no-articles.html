@@ -1,0 +1,1714 @@
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head>
+	<meta charset="utf-8">
+	<title>Join Celebrations! Appwrite 1.3 Ships Relationships - DEV Community</title>
+		<meta name="last-updated" content="2023-04-12 16:08:57 UTC">
+		<meta name="user-signed-in" content="false">
+		<meta name="head-cached-at" content="1681315737">
+			<!-- Experimental web monetization payment pointer for micropayments -->
+			<!-- It lets readers make micropayments to websites they visit. -->
+			<!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+			<!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+			<!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+			<meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+		<meta name="environment" content="production">
+		<link rel="stylesheet" href="https://dev.to/assets/minimal-d5ac97e4a0c81ad7c2fee6ce2a9ed7081d505ab40b9da34ccc52376705799da2.css" media="all" id="main-minimal-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="main-views-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/crayons-94f743942a7e00bf43c8edfe321a6ed54228f179e9232ca4fda23ada50c756f7.css" media="all" id="main-crayons-stylesheet">
+
+		<script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://dev.to/assets/base-c1073510dc136e54056cec0d10e42e0a02414903dac4168d95e7eb4815d44ae5.js" defer="defer"></script>
+			<script src="https://dev.to/packs/js/runtime~base-8896363640a7541d7519.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/base-abc0d2f582be63b9f750.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseInitializers-7a38b172739b7a0a786e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseInitializers-0ba6397385ff736f6ff2.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~Search-2e8b6ed1bf333f6c34a2.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-a7b01b111383ac9e2e72.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/Search-6d9c97d8168e857db884.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~runtimeBanner-35cec1afb628bb702e98.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtimeBanner-4263577aecba891aae2b.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~baseTracking-8719f4a10d2d9dfc794e.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/baseTracking-a774e284b8c194499865.chunk.js" defer="defer"></script>
+		
+
+<link rel="canonical" href="https://dev.to/">
+<meta name="description" content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+<meta name="keywords" content="software development, engineering, rails, javascript, ruby">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dev.to/">
+<meta property="og:title" content="DEV Community">
+<meta property="og:image" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+<meta property="og:description" content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+<meta property="og:site_name" content="DEV Community">
+
+<meta name="twitter:site" content="@thepracticaldev">
+<meta name="twitter:title" content="DEV Community">
+<meta name="twitter:description" content="A constructive and inclusive social network for software developers. With you every step of your journey.">
+<meta name="twitter:image:src" content="https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="DEV Community RSS Feed" href="https://dev.to/feed">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+		<link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+		<link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192">
+		<link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128">
+		<meta name="apple-mobile-web-app-title" content="dev.to">
+		<meta name="application-name" content="dev.to">
+		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+		<link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community">
+
+		<meta property="forem:name" content="DEV Community">
+		<meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+		<meta property="forem:domain" content="dev.to">
+<script charset="utf-8" src="https://dev.to/packs/js/150-9cfd4f1995bf97c83974.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/149-1fbb4ccd19c12f85504a.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/150-9cfd4f1995bf97c83974.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/149-1fbb4ccd19c12f85504a.chunk.js"></script><script src="//www.googletagmanager.com/gtag/js?id=G-TYEM8Y3JN3" async=""></script><script charset="utf-8" src="https://dev.to/packs/js/150-9cfd4f1995bf97c83974.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/149-1fbb4ccd19c12f85504a.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/150-9cfd4f1995bf97c83974.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/149-1fbb4ccd19c12f85504a.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/150-9cfd4f1995bf97c83974.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/149-1fbb4ccd19c12f85504a.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/155-3765988862b7155c34fc.chunk.js"></script><script charset="utf-8" src="https://dev.to/packs/js/160-5bcdcb4b2a95531c209b.chunk.js"></script><style id="ff-styles">
+.ff-container{display:inline-block;position:relative}.ff-container .ff-image{z-index:0;vertical-align:top;opacity:0}.ff-container .ff-canvas{display:inline-block;position:absolute;top:0;left:0;pointer-events:none;z-index:1;vertical-align:top;opacity:0}.ff-container .ff-canvas.ff-canvas-ready{-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;-moz-transition:opacity 300ms;transition:opacity 300ms;opacity:1}.ff-container.ff-active .ff-image{opacity:1}.ff-container.ff-active .ff-canvas.ff-canvas-ready{-webkit-transition:none;-o-transition:none;-moz-transition:none;transition:none;opacity:0}.ff-container.ff-active .ff-overlay{display:none}.ff-container.ff-inactive .ff-canvas.ff-canvas-ready{-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;-moz-transition:opacity 300ms;transition:opacity 300ms;opacity:1}.ff-container.ff-inactive .ff-image{-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;-moz-transition:opacity 300ms;transition:opacity 300ms;-webkit-transition-delay:170ms;-moz-transition-delay:170ms;-o-transition-delay:170ms;transition-delay:170ms;opacity:0}.ff-container.ff-responsive{width:100%}.ff-container.ff-responsive .ff-image,.ff-container.ff-responsive .ff-canvas{width:100%}.ff-container.ff-loading-icon:before{content:"";position:absolute;background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSc1MHB4JyBoZWlnaHQ9JzUwcHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0idWlsLXNwaW4iPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MCA1MCkiPjxnIHRyYW5zZm9ybT0icm90YXRlKDApIHRyYW5zbGF0ZSgzNCAwKSI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjgiIGZpbGw9IiNmZmZmZmYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwLjEiIGJlZ2luPSIwcyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InNjYWxlIiBmcm9tPSIxLjUiIHRvPSIxIiBiZWdpbj0iMHMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+PC9jaXJjbGU+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSB0cmFuc2xhdGUoMzQgMCkiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4IiBmaWxsPSIjZmZmZmZmIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBmcm9tPSIxIiB0bz0iMC4xIiBiZWdpbj0iMC4xMnMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMS41IiB0bz0iMSIgYmVnaW49IjAuMTJzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSg5MCkgdHJhbnNsYXRlKDM0IDApIj48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iOCIgZmlsbD0iI2ZmZmZmZiI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgZnJvbT0iMSIgdG89IjAuMSIgYmVnaW49IjAuMjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjEuNSIgdG89IjEiIGJlZ2luPSIwLjI1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2NpcmNsZT48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMTM1KSB0cmFuc2xhdGUoMzQgMCkiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4IiBmaWxsPSIjZmZmZmZmIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBmcm9tPSIxIiB0bz0iMC4xIiBiZWdpbj0iMC4zN3MiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMS41IiB0bz0iMSIgYmVnaW49IjAuMzdzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgxODApIHRyYW5zbGF0ZSgzNCAwKSI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjgiIGZpbGw9IiNmZmZmZmYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwLjEiIGJlZ2luPSIwLjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjEuNSIgdG89IjEiIGJlZ2luPSIwLjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgyMjUpIHRyYW5zbGF0ZSgzNCAwKSI+PGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjgiIGZpbGw9IiNmZmZmZmYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIGZyb209IjEiIHRvPSIwLjEiIGJlZ2luPSIwLjYycyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZT48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InNjYWxlIiBmcm9tPSIxLjUiIHRvPSIxIiBiZWdpbj0iMC42MnMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGVUcmFuc2Zvcm0+PC9jaXJjbGU+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDI3MCkgdHJhbnNsYXRlKDM0IDApIj48Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iOCIgZmlsbD0iI2ZmZmZmZiI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ib3BhY2l0eSIgZnJvbT0iMSIgdG89IjAuMSIgYmVnaW49IjAuNzVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0ic2NhbGUiIGZyb209IjEuNSIgdG89IjEiIGJlZ2luPSIwLjc1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2NpcmNsZT48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMzE1KSB0cmFuc2xhdGUoMzQgMCkiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4IiBmaWxsPSIjZmZmZmZmIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBmcm9tPSIxIiB0bz0iMC4xIiBiZWdpbj0iMC44N3MiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIj48L2FuaW1hdGU+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJzY2FsZSIgZnJvbT0iMS41IiB0bz0iMSIgYmVnaW49IjAuODdzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPjwvY2lyY2xlPjwvZz48L2c+PC9zdmc+");background-position:center center;background-repeat:no-repeat;height:46px;width:46px;z-index:3;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.ff-container .ff-overlay{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABeCAQAAAAA22vlAAAGFklEQVR42t2ce0yVdRjHP9zlKnfQAwoqV80bImCR90tGhJmShVOxVFJBrdSWVmvmnJlSm2ZbWwunlc4ZOf5IV7NJ84KmFpmZioiKigoKyPWct72vJ4dj0Lm8t9Nz/jt/fd73/L6/5/v8fs9z4H8VTjjhjAuu5o8LLtJ3DoEuYnvghS89pY8PnrjjgrPeH0BEd8fbEHRpaVOZqVUQ2m/cLfomGX+8pAfQ8S8gonvglx/TeEToEKbW69vnD6Annrjp9QEevnU/Q0RDmdAp2m6ffSs0DD964KrHBeSEK96EnlgtdBGN5T9kEYQPHvp7AGc8CCCq7ozQTdzdv2U4AXjrTQEueBFGorFN6DaMzZWFU/t2UIAuwhVfIkkSLIiW6lOLfULx1Y8C3PAnmjTBwmg4UTyFQLzx0MMCcieQAaQLlofp1u73B+sjB7gTRCyjBavCWF+xPs2gvQJE+DjGCFZH8+WjuQRrqwB3gm2DF+P+4Z1jJQVotIDsghcEk7H6q4I4/M02TuUHsBNejPa6c2sTemlhImSAF6Pp/M/ZkgJUNREywYtRe3B7mroKkBFetNFXP5vTXz0bLSu8ZKNr/nhDLRstO7xko39Tx0YrAi/G7e+Vt9GKwYs2uqowK0pJE6EgvKSAG7/nK2ejFYaXbPSpkgxlFKACvKSAfR8Pk18BKsELgrGpcovchaRq8IJUSJ5eIqcCVIWXFHBy/1QC5VGA6vCii7i9d+NQOQpJLeBFBTy4vMl+BWgELyng2q95hNijAA3hJQWUPTpKcbV+AWkMLylgzwdDbFOA9vCiAhovb5zQx3oF6AJeUkDVyQXWHqXoBl5SwLF9k6w5TNQVvHSY+K3lh4l6gxcV0FCxIc1gSSGpQ3hJAZWl2QTghVt3+DqFF3+AMwUE4SXt/w4HL5hatoonoZ5db546hheEq3sQ1767Q8I33yKGYOndOx68IDCE3vg4JLypnWRE2+DqgPC3K0glGn+HhC8pIpUoh3zzd24aZpJEJL4OB3+vNnMlExlEON4OJViTUFqWsJwsUulHID1wdhj4C1XZn7KA6aSTQDg+XRsEncHX3lu323k5c3medAYiXlR7OIQ9aG3bfSjobRaQzWRSiMeAv2SL9W/MjpWnrOd1csggnSH049+rIb37+crq3M/JZw7TGEcScRgsu1XUHL6+cfN3riuYzwwmkkIifSw/iNIUvt1Y/EvkWhbxEs/wJE8QTZg1ByAawp/+a9xHLGY2mYxmGAPoZe31g0bw1TUFX5LPPGmVjyCOCFsufjSAf9C0vcTzTV5lJpNJJZG+hNh26awyvNF08PiA91jEyzzLUwyWtkR/W6/7VYX/81JmIUukVT6GYcTQ275GC9Xga2rX7GQZuUxnAsnEE2l/k5cq8M0tRQd7rmKBtMrTGEQUoXK0VigObxIOnxq8jjxeMSf+/oTL1dioMPzFqllbWcocshhDErGWJn7N4evurxftbS4vMpGRJNBH7lZGheDb2vYcChHtrZj4R0mrPEz+/g9F4MvOjtpgtrdPM5T+9FKmfVd2+Gs3874gn7mP7G3Eo/tuJ123rDQ2bdvvISb+GUyy1t5qCm80HTje710WMYuptthbDeHPVTxK/KPNiV+FMQ0Z4O/Urdn1WOKPIFidARk74Vtbd/0YsPqxxB+iXlexXfBHy0d82CnxezpAO+6V6nnbzYl/rPyJX0H4hsbC4g4VvwKJXyF4o7HkSF87Kn4N4csvTNncqeL30m7swuKBl5q7q3ZQwDxeYLztFb/c8LGM/q/xuuaWogO+K3nNXPEPtL3ilxdeGvK6fr479NLTUi0kVvwPD0HDba/45QzzeN2ObV2BV1zL2dahForRYkvsKsyDjZ7TrvzdGfxe/aa9zuKWqFgtZF+YR0oZH7/w4oWO4O3txaWGd1iobC1kX5iHeUkmwy33k68vXWlvF4S6+p/Kxm0gjxyeU7YWsi/MY9TEkUYGOeSxjBXks4jZZHU6BNXZGLt5gJ1exJLMeDKZwUymk8E4RipfC8mB74EfoUSRyHBSSGUkQ4nX4yrv6u17E0AYEUQRTV8MhDjCnzbgaH+X8Q8RGKy7dFBuqQAAAABJRU5ErkJggg==");background-repeat:no-repeat;max-width:94px;max-height:94px;position:absolute;left:0%;right:0%;top:0%;bottom:0%;margin:auto;-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;background-position:center;pointer-events:none;z-index:100}
+</style><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="VvxVCvaR2kgG7EXXNemowMGMwtHPeVb4zbYc2PCGAbTPfn3Ebk4HXDjNx82JeikLRvPLKXJCGM7-C4N4W2Aubw"><script charset="utf-8" src="https://dev.to/packs/js/154-6932183fdea768c8f16d.chunk.js"></script></head>
+		<body class="sans-serif-article-body default-header" data-user-status="logged-out" data-community-name="DEV Community" data-locale="en" data-honeybadger-key="a45862f6" data-deployed-at="2023-04-12T14:31:43Z" data-latest-commit-id="91b788b196df6a872b0c60f8b417157744692c17" data-ga-tracking="UA-71991109-1" data-ga4-tracking-id="G-TYEM8Y3JN3" data-runtime="Browser-macOS" data-new-gr-c-s-check-loaded="14.1104.0" data-gr-ext-installed="" data-loaded="true">
+			<link rel="stylesheet" href="https://dev.to/assets/minimal-d5ac97e4a0c81ad7c2fee6ce2a9ed7081d505ab40b9da34ccc52376705799da2.css" media="all" id="secondary-minimal-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/views-a822a802b110caff2437290482aeedca5d29bff583c46097cf90718fa4c61d71.css" media="all" id="secondary-views-stylesheet">
+<link rel="stylesheet" href="https://dev.to/assets/crayons-94f743942a7e00bf43c8edfe321a6ed54228f179e9232ca4fda23ada50c756f7.css" media="all" id="secondary-crayons-stylesheet">
+
+			<div id="body-styles">
+				<style>
+					:root {
+						--accent-brand-lighter-rgb: 80, 99, 301;
+						--accent-brand-rgb: 59, 73, 223;
+						--accent-brand-darker-rgb: 47, 58, 178;
+					}
+				</style>
+			</div>
+			<div id="audiocontent" data-podcast="">
+				
+			</div>
+			<div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+<span id="route-change-target" tabindex="-1"></span>
+<a href="#main-content" class="skip-content-link">Skip to content</a>
+<div class="crayons-header__container">
+	<span class="inline-block m:hidden ">
+		<button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aaumvuui074586fpr8fmlopdga63jk5o" class="crayons-icon"><title id="aaumvuui074586fpr8fmlopdga63jk5o">Navigation menu</title>
+	<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+		</button>
+	</span>
+	<a href="/" class="site-logo" aria-label="DEV Community Home">
+	<img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
+</a>
+
+
+	<div class="crayons-header--search js-search-form" id="header-search"><form method="get" action="/search" role="search" accept-charset="UTF-8" data-np-autofill-type="other" data-np-checked="1" data-np-watching="1"><input name="utf8" type="hidden" value="✓"><div class="crayons-fields crayons-fields--horizontal"><div class="crayons-field flex-1 relative"><input class="crayons-header--search-input crayons-textfield" type="text" id="" name="q" placeholder="Search..." autocomplete="off" aria-label="Search term"><button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="crayons-icon c-btn__icon" focusable="false"><path d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path></svg></button></div></div></form>
+		
+	</div>
+
+	<div class="flex items-center h-100 ml-auto">
+		<a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="/search">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a1dw53v0popbvsexf5vfof0dvyuk1kw5" class="crayons-icon"><title id="a1dw53v0popbvsexf5vfof0dvyuk1kw5">Search</title>
+	<path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+		</a>
+			<div class="flex" id="authentication-top-nav-actions">
+				<span class="hidden m:block">
+					<a href="/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant="">
+						Log in
+					</a>
+				</span>
+
+				<a href="/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant="">
+					Create account
+				</a>
+			</div>
+	</div>
+</div>
+</header>
+
+<div class="hamburger">
+<div class="hamburger__content">
+	<header class="hamburger__content__header">
+		<h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+		<button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="abtsgbpq7wafssmgnh73ccoo3qk5v55o" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="abtsgbpq7wafssmgnh73ccoo3qk5v55o">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+		</button>
+	</header>
+
+	<div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+	</div>
+</div>
+<div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+			<div id="active-broadcast" class="broadcast-wrapper"></div>
+<div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper stories stories-show" data-current-page="stories-show">
+<div id="page-content-inner" data-follow-clicks-initialized="true">
+	<div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true">Join Celebrations! Appwrite 1.3 Ships Relationships - DEV Community</div>
+	
+
+
+<style>
+.html-variant-wrapper { display: none}
+</style>
+
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.10/webcomponents-loader.js" integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy" crossorigin="anonymous" defer=""></script>
+
+<script src="https://dev.to/packs/js/runtime~webShare-7453f2c5038b6f8709c0.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/webShare-da771b62f52682b7ace0.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~articlePage-51763968b51ee1187abe.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/articlePage-81dea6f892d5f0d31b6d.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/runtime~commentDropdowns-b9f7408d47a74ece0fa5.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/commentDropdowns-103b2e9cda88ab083838.chunk.js" defer="defer"></script>
+
+
+<!-- You may be seeing the canonical URL in the body for human inspection -->
+<!-- This is because of navigation via InstantClick, instantclick.io -->
+<!-- However, the crawled version of the page has the canonical in the head. -->
+<!-- This is confirmed by the canonical url inspector. See https://github.com/forem/forem/issues/9509#issuecomment-732259221. -->
+<link rel="canonical" href="https://dev.to/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc">
+<meta name="description" content="Our latest release Appwrite 1.3 includes the most requested feature, Database Relationships 🎉 While... Tagged with opensource, programming, news, showdev.">
+<meta name="keywords" content="opensource, programming, news, showdev, software, coding, development, engineering, inclusive, community">
+
+<div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+<aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+	<div class="crayons-article-actions print-hidden">
+<div class="crayons-article-actions__inner">
+
+	
+<div class="reaction-drawer__outer hoverdown" style="">
+<button id="reaction-drawer-trigger" aria-label="reaction-drawer-trigger" aria-pressed="false" class="hoverdown-trigger crayons-reaction pseudo-reaction crayons-tooltip__activator relative">
+		<span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction--like crayons-reaction__icon--inactive" style="width: 40px; height: 40px">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon">
+	<g clip-path="url(#clip0_988_3276)">
+			<path d="M19 14V17H22V19H18.999L19 22H17L16.999 19H14V17H17V14H19ZM20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.992L19.059 11.574C20.39 10.05 20.32 7.65998 18.827 6.16998C17.324 4.67098 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09103 4.60598 6.67503 4.66798 5.17203 6.17198C3.68203 7.66198 3.60703 10.047 4.98003 11.623L13.412 20.069L12 21.485L3.52003 12.993C1.41603 10.637 1.49503 7.01898 3.75603 4.75698C6.02103 2.49298 9.64403 2.41698 12 4.52898C14.349 2.41998 17.979 2.48998 20.242 4.75698H20.243Z" fill="#525252"></path>
+	</g>
+	<defs>
+			<clipPath id="clip0_988_3276">
+			<rect width="24" height="24" fill="white"></rect>
+			</clipPath>
+	</defs>
+</svg>
+
+		</span>
+		<span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--active" style="width: 40px; height: 40px">
+			<img aria_hidden="true" height="24" width="24" src="https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg">
+		</span>
+		<span class="crayons-reaction__count" id="reaction_total_count">50</span>
+		<span class="crayons-tooltip__content">
+			Add reaction
+		</span>
+</button>
+
+<div class="reaction-drawer" aria-expanded="false">
+	<div class="reaction-drawer__container">
+			<button id="reaction-butt-like" name="Like" aria-label="Like" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="like">
+	<span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+		<img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg">
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-like">14</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Like
+	</span>
+</button>
+
+			<button id="reaction-butt-unicorn" name="Unicorn" aria-label="Unicorn" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="unicorn">
+	<span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+		<img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg">
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-unicorn">9</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Unicorn
+	</span>
+</button>
+
+			<button id="reaction-butt-exploding_head" name="Exploding Head" aria-label="Exploding Head" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="exploding_head">
+	<span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+		<img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg">
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-exploding_head">9</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Exploding Head
+	</span>
+</button>
+
+			<button id="reaction-butt-raised_hands" name="Raised Hands" aria-label="Raised Hands" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="raised_hands">
+	<span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+		<img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg">
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-raised_hands">9</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Raised Hands
+	</span>
+</button>
+
+			<button id="reaction-butt-fire" name="Fire" aria-label="Fire" aria-pressed="false" class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2 activated" data-category="fire">
+	<span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+		<img aria_hidden="true" height="32" width="32" src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg">
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-fire">9</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Fire
+	</span>
+</button>
+
+	</div>
+</div>
+</div>
+
+<button id="reaction-butt-comment" aria-label="Jump to Comments" aria-pressed="false" class="crayons-reaction crayons-reaction--comment crayons-tooltip__activator relative" data-category="comment">
+	<span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+	<path d="M10 3h4a8 8 0 010 16v3.5c-5-2-12-5-12-11.5a8 8 0 018-8zm2 14h2a6 6 0 000-12h-4a6 6 0 00-6 6c0 3.61 2.462 5.966 8 8.48V17z"></path>
+</svg>
+
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-comment" data-count="1">1</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Jump to Comments
+	</span>
+</button>
+
+<button id="reaction-butt-readinglist" aria-label="Add to reading list" aria-pressed="false" class="crayons-reaction crayons-reaction--readinglist crayons-tooltip__activator relative activated" data-category="readinglist">
+	<span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+	<path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+</svg>
+
+	</span>
+	<span class="crayons-reaction__count" id="reaction-number-readinglist">6</span>
+
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Save
+	</span>
+</button>
+
+
+
+	<div id="mod-actions-menu-btn-area" class="print-hidden hidden align-center"></div>
+	<div class="align-center m:relative">
+		<button id="article-show-more-button" aria-controls="article-show-more-dropdown" aria-expanded="false" aria-haspopup="true" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Share post options" data-initialized="true">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="akn4aig4cpqpsygpep1b8jx6rlftuuma" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="akn4aig4cpqpsygpep1b8jx6rlftuuma">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+
+		</button>
+
+		<div id="article-show-more-dropdown" class="crayons-dropdown side-bar left-2 right-2 m:right-auto m:left-100 s:left-auto mb-1 m:mb-0 top-unset bottom-100 m:top-0 m:bottom-unset">
+			<div>
+				<button id="copy-post-url-button" class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0" data-posturl="https://dev.to/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc">
+					<span class="fw-bold">Copy link</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="article-copy-icon" role="img" aria-labelledby="a3s8dcri5kkegf092nznk07idfavy5ni" aria-hidden="true" class="crayons-icon mx-2 shrink-0"><title id="a3s8dcri5kkegf092nznk07idfavy5ni">Copy link</title>
+	<path d="M7 6V3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 013 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2zm-2 5v2h6v-2H7zm0 4v2h6v-2H7z"></path>
+</svg>
+
+				</button>
+				<div id="article-copy-link-announcer" aria-live="polite" class="crayons-notice crayons-notice--success my-2 p-1" hidden="">Copied to Clipboard</div>
+			</div>
+
+			<div class="Desktop-only">
+				<a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://twitter.com/intent/tweet?text=%22Join%20Celebrations%21%20Appwrite%201.3%20Ships%20Relationships%22%20by%20Matej%20Ba%C4%8Do%20%23DEVCommunity%20https%3A%2F%2Fdev.to%2Fappwrite%2Fjoin-celebrations-appwrite-13-ships-relationships-57fc">
+					Share to Twitter
+				</a>
+				<a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdev.to%2Fappwrite%2Fjoin-celebrations-appwrite-13-ships-relationships-57fc&amp;title=Join%20Celebrations%21%20Appwrite%201.3%20Ships%20Relationships&amp;summary=Our%20latest%20release%20Appwrite%201.3%20includes%20the%20most%20requested%20feature%2C%20Database%20Relationships%20%F0%9F%8E%89%20While...&amp;source=DEV%20Community">
+					Share to LinkedIn
+				</a>
+				<a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdev.to%2Fappwrite%2Fjoin-celebrations-appwrite-13-ships-relationships-57fc&amp;title=Join%20Celebrations%21%20Appwrite%201.3%20Ships%20Relationships">
+					Share to Reddit
+				</a>
+				<a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fdev.to%2Fappwrite%2Fjoin-celebrations-appwrite-13-ships-relationships-57fc&amp;t=Join%20Celebrations%21%20Appwrite%201.3%20Ships%20Relationships">
+					Share to Hacker News
+				</a>
+				<a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdev.to%2Fappwrite%2Fjoin-celebrations-appwrite-13-ships-relationships-57fc">
+					Share to Facebook
+				</a>
+				<a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://toot.kytta.dev/?text=https%3A%2F%2Fdev.to%2Fappwrite%2Fjoin-celebrations-appwrite-13-ships-relationships-57fc">
+					Share to Mastodon
+				</a>
+			</div>
+
+			<web-share-wrapper shareurl="https://dev.to/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc" sharetitle="Join Celebrations! Appwrite 1.3 Ships Relationships" sharetext="Our latest release Appwrite 1.3 includes the most requested feature, Database Relationships 🎉 While..." template="web-share-button">
+			</web-share-wrapper>
+			<template id="web-share-button">
+				<a href="#" class="dropdown-link-row crayons-link crayons-link--block">Share Post via...</a>
+			</template>
+
+			<a href="/report-abuse" class="crayons-link crayons-link--block">Report Abuse</a>
+		</div>
+	</div>
+</div>
+</div>
+
+</aside>
+
+<main id="main-content" class="crayons-layout__content grid gap-4">
+	<div class="article-wrapper">
+
+
+			<header class="crayons-article__header" id="main-title">
+					<div class="crayons-article__cover">
+						<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--b5YcXA_d--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7it2ftp8wdd32clprqas.png" width="1000" height="420" style="background-color:#dddddd;" class="crayons-article__cover__image" alt="Cover image for Join Celebrations! Appwrite 1.3 Ships Relationships">
+					</div>
+
+				<div class="crayons-article__header__meta">
+					<div class="flex s:items-start flex-col s:flex-row">
+						<div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+						<div class="flex flex-1 mb-5 items-start">
+							<div class="relative">
+									<a href="/appwrite"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--MsebtfHP--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2225/18b2c66e-fba2-4f4f-8196-8184c599b75d.png" class="radius-default align-middle" width="40" height="40" alt="Appwrite profile image"></a>
+									<a href="/meldiron" class="absolute -right-2 -bottom-2 radius-full border border-solid border-2 border-base-inverted inline-flex">
+										<img class="radius-full align-middle" src="https://res.cloudinary.com/practicaldev/image/fetch/s--WociiNyG--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/668723/d66547f3-ba23-436f-8d85-053f40c71175.png" width="24" height="24" alt="Matej Bačo">
+									</a>
+							</div>
+							<div class="pl-3 flex-1">
+								<a href="/meldiron" class="crayons-link fw-bold">Matej Bačo</a>
+									<span class="color-base-60"> for </span><a href="/appwrite" class="crayons-link">Appwrite</a>
+								<p class="fs-xs color-base-60">
+										Posted on <time datetime="2023-04-12T09:33:48Z" class="date-no-year" title="mercredi 12 avril 2023 à 11:33:48">12 avr.</time>
+
+
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="multiple_reactions_engagement">
+	<span class="reaction_engagement_like">
+		<img src="https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="24" height="24">
+		<span id="reaction_engagement_like_count">14</span>
+	</span>
+	<span class="reaction_engagement_unicorn">
+		<img src="https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="24" height="24">
+		<span id="reaction_engagement_unicorn_count">9</span>
+	</span>
+	<span class="reaction_engagement_exploding_head">
+		<img src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="24" height="24">
+		<span id="reaction_engagement_exploding_head_count">9</span>
+	</span>
+	<span class="reaction_engagement_raised_hands">
+		<img src="https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="24" height="24">
+		<span id="reaction_engagement_raised_hands_count">9</span>
+	</span>
+	<span class="reaction_engagement_fire">
+		<img src="https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="24" height="24">
+		<span id="reaction_engagement_fire_count">9</span>
+	</span>
+
+<span class="placeholder" style="width: 24px; height: 24px;">&nbsp;</span>
+</div>
+
+
+					<h1 class="fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 medium">
+						Join Celebrations! Appwrite 1.3 Ships Relationships
+					</h1>
+
+						<div class="spec__tags flex flex-wrap">
+								<a class="crayons-tag   " style="
+			--tag-bg: rgba(38, 190, 0, 0.10);
+			--tag-prefix: #26BE00;
+			--tag-bg-hover: rgba(38, 190, 0, 0.10);
+			--tag-prefix-hover: #26BE00;
+		" href="/t/opensource"><span class="crayons-tag__prefix">#</span>opensource</a>
+								<a class="crayons-tag   " style="
+			--tag-bg: rgba(137, 6, 6, 0.10);
+			--tag-prefix: #890606;
+			--tag-bg-hover: rgba(137, 6, 6, 0.10);
+			--tag-prefix-hover: #890606;
+		" href="/t/programming"><span class="crayons-tag__prefix">#</span>programming</a>
+								<a class="crayons-tag   " style="
+			--tag-bg: rgba(17, 17, 17, 0.10);
+			--tag-prefix: #111111;
+			--tag-bg-hover: rgba(17, 17, 17, 0.10);
+			--tag-prefix-hover: #111111;
+		" href="/t/news"><span class="crayons-tag__prefix">#</span>news</a>
+								<a class="crayons-tag   " style="
+			--tag-bg: rgba(9, 27, 71, 0.10);
+			--tag-prefix: #091b47;
+			--tag-bg-hover: rgba(9, 27, 71, 0.10);
+			--tag-prefix-hover: #091b47;
+		" href="/t/showdev"><span class="crayons-tag__prefix">#</span>showdev</a>
+						</div>
+				</div>
+			</header>
+
+			<div class="crayons-article__main">
+
+				<div class="crayons-article__body text-styles spec__body" data-article-id="1432773" id="article-body">
+					<p>Our latest release Appwrite 1.3 includes the most requested feature, <strong>Database Relationships</strong> 🎉 While relationships deserve all the spotlight, we are bringing many more exciting features. Databases were the focus of this release and got some new and shiny <strong>query operators</strong>, such as <code>Query.select()</code> or <code>Query.isNull()</code>. Databases now allow give you more freedom with some of the <strong>index and page limits</strong> eliminated. Oh, and I can’t stress this enough, the new Console UI with <strong>configurable layout</strong> options and a <strong>multi-level menu</strong> is just beautiful 😍 Auth service got some thrilling new <strong>password policy</strong> configurations and Teams API now lets you set <strong>team preferences</strong>. Functions service got improvements to <strong>variables UI</strong> in Appwrite Console, and that’s not even everything! Grab your favorite snack and enjoy our announcement. 🍿</p>
+
+<h2>
+<a name="new-to-appwrite" href="#new-to-appwrite">
+</a>
+🤔 New to Appwrite?
+</h2>
+
+<p><a href="https://appwrite.io/">Appwrite</a> is an open-source back-end-as-a-service that abstracts all the complexity of building a modern application by providing you with a set of REST, GraphQL, and Realtime APIs for your core back-end needs. Appwrite takes the heavy lifting for developers and handles user authentication and authorization, databases, file storage, cloud functions, webhooks, and much more!</p>
+
+<h2>
+<a name="relationships-in-database-service" href="#relationships-in-database-service">
+</a>
+🔗 Relationships in Database Service
+</h2>
+
+<p><a href="https://appwrite.io/docs/databases">Appwrite Databases</a> lets you store your data and share it with all of your app users. Relationships allow you to create connections between your data to make them predictable, consistent, and easy to work with. With Relationships Beta added to Appwrite, you can now set up the four most common types of relationships directly in your Appwrite Console, and start querying your data together.</p>
+
+<p>With one-to-one and many-to-one relations, you can now store similar data in separate collections to have separate permission rules. This lets you build secure apps but still keep reading data exceptionally simple.</p>
+
+<p>One-to-many relations bring a powerful replacement to all of your array attributes. With a related collection, you can now store data of any complexity, and query it as you like. You can also get all the data in one request without any need to do mapping on the client side.</p>
+
+<p>Many-to-many relationships are now much simpler. You no longer need to manage your own junction table as we do it for you. </p>
+
+<p>As complex as relationships sound, with Appwrite, there is no need to write lengthy queries. After setting up a relationship, simply read your documents and get exactly what you expect:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight typescript"><code><span class="kd">const</span> <span class="nx">databases</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Databases</span><span class="p">(</span><span class="nx">client</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">listDocuments</span><span class="p">(</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">calendars</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+	<path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+	<path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="highlight js-code-highlight">
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+</span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+</span><span class="nl">"documents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meetings"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+			</span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lunch Break"</span><span class="p">,</span><span class="w"> </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-04-03T16:30:00.000+00:00"</span><span class="w"> </span><span class="p">},</span><span class="w">
+			</span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Onboarding"</span><span class="p">,</span><span class="w"> </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-04-03T18:00:00.000+00:00"</span><span class="w"> </span><span class="p">}</span><span class="w">
+		</span><span class="p">]</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+	<path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+	<path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>It’s that easy! 🤩 If the response payload ever grows too big,  with the new <code>Query.select()</code> operator you can ask for only attributes you are interested in. More on that in a later section 🤫</p>
+
+<h2>
+<a name="databases-getting-flexier" href="#databases-getting-flexier">
+</a>
+🤸 Databases Getting Flexier
+</h2>
+
+<p>Maximum page size and indexes make end-product faster but can create a lot of road bumps during development. These limits even created a blocker for some use cases. <strong>Not anymore!</strong></p>
+
+<p>The maximum page size for getting your documents was capped at 100. In Appwrite 1.3, this limit was eliminated. We noticed it felt limiting to many projects and implementing infinite cursor pagination wasn’t a cup of tea for everyone. While it is not recommended to query millions of documents in a single request, we made sure to provide you with tools, and yet you, a developer, make the decision.</p>
+
+<p>Strict indexes for queries in Appwrite 1.3 are no longer necessary! If you ever used Appwrite Databases, chances are, you have seen the error <code>⚠️Index Not Found</code>. Such strict indexes can get in the way during development and can be a blocker to some use cases with complex filtering possibilities. With Appwrite 1.3, you are no longer going to get errors telling you to set up an index.</p>
+
+<p>Let’s get a little crazy and see what we can do now:<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight typescript"><code><span class="kd">const</span> <span class="nx">databases</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Databases</span><span class="p">(</span><span class="nx">client</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">listDocuments</span><span class="p">(</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">events</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">limit</span><span class="p">(</span><span class="mi">999999</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">orderDesc</span><span class="p">(</span><span class="dl">'</span><span class="s1">$id</span><span class="dl">'</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">orderAsc</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">orderDesc</span><span class="p">(</span><span class="dl">'</span><span class="s1">date</span><span class="dl">'</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">greaterThan</span><span class="p">(</span><span class="dl">'</span><span class="s1">duration</span><span class="dl">'</span><span class="p">,</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="dl">'</span><span class="s1">description</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">urgent</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">]);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+</code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+	<path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+	<path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>As complex as this looks, Appwrite will accept this query and give you the results. As your app grows and this query gets slower, make sure to add indexes!😅</p>
+
+<h2>
+<a name="new-database-queries" href="#new-database-queries">
+</a>
+🔍 New Database Queries
+</h2>
+
+<p>Since we released the last database refactor in Appwrite 1.0, we noticed a huge increase in developers using Appwrite Databases. Databases became much quicker, more powerful, and more stable. With all the new feedback from our community, we noticed queries need some more attention, which is exactly what we did 😎</p>
+
+<p>We are proud to announce the most requested query <code>Query.isNull()</code> alongside <code>Query.isNotNull()</code>. Null query lets you check if the value of an attribute in the document was provided, or was left empty during the creation of the document.</p>
+
+<p>With relationships added to databases, we decided to also introduce <code>Query.select()</code> to allow developers to specify what attributes they are interested in, similarly to how it can be done with GraphQL. Specifying attributes with a select query not only decreases the size of the response, but also makes underlying queries faster and more efficient.</p>
+
+<p>We also added <code>Query.startsWith()</code> and <code>Query.endsWith()</code> to bring some more searching possibilities to your string attributes. While this doesn’t sound like much, it is a great addition for many applications as workarounds for this feature were overcomplicated.</p>
+
+<p>Last but not least, we added a <code>Query.between()</code> to improve the performance of your numeric and datetime queries when you are looking for a specific range. This was already possible with <code>Query.greaterThan()</code>&nbsp;and <code>Query.lessThan()</code>, but by using <code>Query.between()</code> we have seen improvements in performance. We are constantly working on adding new query capabilities and plan to keep introducing new ones in the future with each release.</p>
+
+<p>Let’s bring all the queries together and see them in action!<br>
+</p>
+
+<div class="highlight js-code-highlight">
+<pre class="highlight typescript"><code><span class="kd">const</span> <span class="nx">databases</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Databases</span><span class="p">(</span><span class="nx">client</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">listDocuments</span><span class="p">(</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">profiles</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">isNotNull</span><span class="p">(</span><span class="dl">'</span><span class="s1">employerId</span><span class="dl">'</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="dl">'</span><span class="s1">phoneNumber</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">+61</span><span class="dl">'</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">between</span><span class="p">(</span><span class="dl">'</span><span class="s1">age</span><span class="dl">'</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span>
+	<span class="nx">Query</span><span class="p">.</span><span class="nx">select</span><span class="p">([</span><span class="dl">''</span><span class="nx">twitterUrl</span><span class="dl">'</span><span class="s1">, </span><span class="dl">'</span><span class="nx">linkedInUrl</span><span class="dl">'</span><span class="s1">])
+]);
+
+console.log(response);
+</span></code></pre>
+<div class="highlight__panel js-actions-panel">
+<div class="highlight__panel-action js-fullscreen-code-action">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-on"><title>Enter fullscreen mode</title>
+	<path d="M16 3h6v6h-2V5h-4V3zM2 3h6v2H4v4H2V3zm18 16v-4h2v6h-6v-2h4zM4 19h4v2H2v-6h2v4z"></path>
+</svg>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" class="highlight-action crayons-icon highlight-action--fullscreen-off"><title>Exit fullscreen mode</title>
+	<path d="M18 7h4v2h-6V3h2v4zM8 9H2V7h4V3h2v6zm10 8v4h-2v-6h6v2h-4zM8 15v6H6v-4H2v-2h6z"></path>
+</svg>
+
+</div>
+</div>
+</div>
+
+
+
+<p>We just filtered profiles to only see unemployed folks with a phone number from Canada, and a good age for student part-time job. We are only fetching their socials, so we can easily get in touch with them.</p>
+
+<h2>
+<a name="improved-passwords-security" href="#improved-passwords-security">
+</a>
+✨ Improved Passwords Security
+</h2>
+
+<p>To keep users of your application safe, Appwrite already had a minimum of 8 character limit for the password. Today we have improved password security with two new rules. 🔥</p>
+
+<p>With Appwrite 1.3 you can now enable password history and configure its length. With password history enabled, your users won’t be allowed to use the exact same password that they used previously when changing their password. The length of password history lets you set how much into the past should Appwrite remember, a maximum of up to 20 passwords.</p>
+
+<p>You can now also enable a rule for password dictionary. Appwrite knows what are the most common passwords, and with this rule enabled, it will not allow you users to set any of those passwords. It prevents your users from having passwords like <code>password</code>, <code>123456678</code>, or <code>qwertyui</code>. Appwrite currently knows the 10,000 most commonly used passwords thanks to the same list used by other industry-leading auth providers. You can check out the <a href="https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt">dictionary list</a> on GitHub.</p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--cUdyT-hO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4tdc5h66hqw3179td9wv.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cUdyT-hO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4tdc5h66hqw3179td9wv.png" alt="Password Policies Console UI" loading="lazy" width="800" height="480"></a></p>
+
+<h2>
+<a name="teams-get-preferences" href="#teams-get-preferences">
+</a>
+🧑‍🤝‍🧑 Teams Get Preferences
+</h2>
+
+<p>Teams API got an upgrade and can now store preferences on teams. Similarly to user preferences, this feature is intended to help you store app configuration and apply it in a proper scope. You can, for example, use team preferences for business apps where the team owner (IT department in a company) does all the configuration and layout setup. Then all team members (all employees) read this setup from preferences and see the app in exactly the same way.</p>
+
+<p>With this addition to the preferences family, you can now store preferences on all necessary levels. Let’s consider a scenario when we are storing if a dark theme is enabled or not. By writing to a local device, you are creating a preference on the session level. When you open the app on a new device, you will no longer have the dark theme. By using user preferences and storing them on the user level, the dark theme would be enabled as soon as you sign into your account. Finally, with team-level preferences, you can share the theme with multiple users such as students, employees, friends, or the community. </p>
+
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--ORoW2d5M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5ue8dblkilimztsho9jz.png" class="article-body-image-wrapper"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ORoW2d5M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5ue8dblkilimztsho9jz.png" alt="Team Preferences Console UI" loading="lazy" width="800" height="303"></a></p>
+
+<h2>
+<a name="importing-function-variables" href="#importing-function-variables">
+</a>
+🔑 Importing Function Variables
+</h2>
+
+<p>Variables in Appwrite Functions lets you set secrets that you can securely access in your code. With Appwrite 1.3 we added a highly-requested button to <code>Import .env file</code> 🤯 With this new feature you can drag&amp;drop the <code>.env</code> file from your function folder and Console will take care of adding all variables defined in there. Additionally, all existing variables get updated with values from your file. This is exciting for those of us who have many variables and don’t want to create them one by one. </p>
+
+<p><div class="ff-container ff-ready ff-active"><button type="button" class="c-btn gif-button fs-s gap-2" aria-label="Pause animation playback" aria-pressed="false"><svg class="crayons-icon gif-play" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM10.622 8.415a.4.4 0 0 0-.622.332v6.506a.4.4 0 0 0 .622.332l4.879-3.252a.4.4 0 0 0 0-.666l-4.88-3.252h.001Z"></path></svg><svg class="crayons-icon gif-pause" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM9 9v6h2V9H9Zm4 0v6h2V9h-2Z"></path></svg>GIF</button>
+<canvas class="ff-canvas ff-canvas-ready" width="678" height="456">
+</canvas><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vFRbfIA---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lgd3d04algqcqyczg67d.gif" alt="Function Variables Import GIF" loading="lazy" width="800" height="538" data-animated="true" id="animated-0" class="ff-image"></div></p>
+
+<h2>
+<a name="whats-next" href="#whats-next">
+</a>
+⏩ What’s Next?
+</h2>
+
+<p>With Appwrite 1.3 out in the public, we are starting to actively work on features for Appwrite 1.4. Some of you may have already noticed GitHub activity around Functions, which we plan to be our focus for the next release. As always, we are looking forward to hearing feedback from you and prioritizing features <strong>YOU</strong> are anticipating.</p>
+
+<h2>
+<a name="learn-more" href="#learn-more">
+</a>
+📚 Learn More
+</h2>
+
+<p>You can use the following resources to learn more and get help:</p>
+
+<ul>
+<li><a href="https://github.com/appwrite/appwrite/">🚀 Appwrite GitHub</a></li>
+<li><a href="https://appwrite.io/docs">📜 Appwrite Docs</a></li>
+<li><a href="https://appwrite.io/discord">💬 Discord Community</a></li>
+</ul>
+
+
+				</div>
+
+			</div>
+				<section id="comments" data-follow-button-container="true" data-updated-at="2023-04-12 12:27:01 UTC" class="text-padding mb-4 border-t-1 border-0 border-solid border-base-10">
+		<header class="relative flex justify-between items-center mb-6">
+			<div class="flex items-center">
+				<h2 class="crayons-subtitle-1">
+					Top comments <span class="js-comments-count" data-comments-count="1">(1)</span>
+				</h2>
+				<button class="c-btn c-btn--ghost crayons-btn--icon-left" id="toggle-comments-sort-dropdown" aria-controls="comments-sort-dropdown-container" aria-expanded="false" aria-label="Sort comments" aria-haspopup="true" data-initialized="true">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="mt-2"><title>Crown</title>
+	<path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+				</button>
+			</div>
+
+			<nav class="crayons-dropdown p-4" id="comments-sort-dropdown-container" aria-labelledby="comments-sort-title">
+					<h3 id="comments-sort-title" class="mb-3">Sort discussion: </h3>
+					<ul class="comments-sort-dropdown__list">
+						<li class="comment-sort-option">
+<a href="/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc?comments_sort=top#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="top-description-text" aria-current="page">
+	<div>
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="arfgjuca5oqkglauuqwy2cgrdfq9lwiw" aria-hidden="true" class="crayons-icon"><title id="arfgjuca5oqkglauuqwy2cgrdfq9lwiw">Selected Sort Option</title>
+	<path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414 4.95 4.95z"></path>
+</svg>
+
+		 Top
+	</div>
+	 <div id="top-description-text" class="crayons-field__description">
+		Most upvoted and relevant comments will be first
+	</div>
+</a>
+</li>
+
+						<li class="comment-sort-option">
+<a href="/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc?comments_sort=latest#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="latest-description-text" aria-current="">
+	<div>
+		
+		 Latest
+	</div>
+	 <div id="latest-description-text" class="crayons-field__description">
+		Most recent comments will be first
+	</div>
+</a>
+</li>
+
+						<li class="comment-sort-option">
+<a href="/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc?comments_sort=oldest#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="oldest-description-text" aria-current="">
+	<div>
+		
+		 Oldest
+	</div>
+	 <div id="oldest-description-text" class="crayons-field__description">
+		The oldest comments will be first
+	</div>
+</a>
+</li>
+
+					</ul>
+			</nav>
+
+			<div id="comment-subscription" class="print-hidden"><div class="static"><div role="group" aria-label="Comment subscription options" class="crayons-btn-group"><button class="crayons-btn crayons-btn--outlined" type="button" data-tracking-name="comment_subscription_toggle">Subscribe</button></div></div>
+				
+			</div>
+		</header>
+
+		<div id="comments-container" data-testid="comments-container" data-commentable-id="1432773" data-commentable-type="Article" data-has-recent-comment-activity="true">
+
+				<div id="response-templates-data" class="hidden"></div>
+<script src="https://dev.to/packs/js/runtime~validateFileInputs-6f6f79168b31561b7c74.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/0-6bf46cb11ef27e3ebc1f.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/1-0a11659385a997393010.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/validateFileInputs-f7fc1ddb14414e6c1b6f.chunk.js" defer="defer"></script>
+
+
+<form class="comment-form print-hidden" id="new_comment" action="/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off">
+
+<input type="hidden" name="authenticity_token" value="NOTHING" id="new_comment_authenticity_token">
+
+	<input value="1432773" autocomplete="off" type="hidden" name="comment[commentable_id]" id="comment_commentable_id">
+	<input value="Article" autocomplete="off" type="hidden" name="comment[commentable_type]" id="comment_commentable_type">
+	
+
+<span class="crayons-avatar m:crayons-avatar--l mr-2 shrink-0">
+	<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" width="32" height="32" alt="pic" class="crayons-avatar__image overflow-hidden" id="comment-primary-user-profile--avatar" loading="lazy">
+</span>
+<div class="comment-form__inner">
+	<div class="comment-form__field" data-tracking-name="comment_form_textfield">
+		<textarea placeholder="Add to the discussion" onfocus="handleFocus(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)" oninput="handleChange(event)" id="text-area" required="required" class="crayons-textfield comment-textarea crayons-textfield--ghost" aria-label="Add a comment to the discussion" name="comment[body_markdown]"></textarea>
+
+	</div>
+
+	<div class="response-templates-container crayons-card crayons-card--secondary p-4 mb-4 comment-form__templates fs-base hidden">
+		<header class="mb-3">
+			<button type="button" class="crayons-btn personal-template-button active" data-target-type="personal" data-form-id="new_comment">Personal</button>
+			<button type="button" class="crayons-btn moderator-template-button hidden" data-target-type="moderator" data-form-id="new_comment">Trusted User</button>
+		</header>
+
+		<img class="loading-img hidden" src="https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg" alt="loading" loading="lazy">
+
+		<div class="personal-responses-container">
+		</div>
+		<div class="moderator-responses-container hidden">
+		</div>
+
+		<a target="_blank" rel="noopener nofollow" href="/settings/response-templates">
+			Create template
+		</a>
+		<p>Templates let you quickly answer FAQs or store snippets for re-use.</p>
+	</div>
+
+	<div class="comment-form__preview text-styles text-styles--secondary" id="preview-div"></div>
+
+	<div class="comment-form__buttons mb-4">
+		<button type="submit" class="crayons-btn mr-2 js-btn-enable" onclick="validateField(event)" data-tracking-name="comment_submit_button" disabled="">Submit</button>
+		<button type="button" class="preview-toggle crayons-btn crayons-btn--secondary comment-action-preview js-btn-enable mr-2" data-tracking-name="comment_preview_button" disabled="">Preview</button>
+		<a href="/404.html" class="dismiss-edit-comment crayons-btn crayons-btn--ghost js-btn-dismiss hidden">Dismiss</a>
+	</div>
+</div>
+
+<div class="code-of-conduct" id="toggle-code-of-conduct-checkbox"></div>
+</form>
+
+
+			<div class="comments" id="comment-trees-container">
+							<details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+									root
+									" open="">
+		<summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+			<span class="m:mx-1 inline-block align-middle">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aavzx07tkcpe949z3bwhv7w9379y779f" class="crayons-icon expanded"><title id="aavzx07tkcpe949z3bwhv7w9379y779f">Collapse</title>
+	<path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="agho753nkwrquwyrg61k1wx6y1yl0ccy" class="crayons-icon collapsed"><title id="agho753nkwrquwyrg61k1wx6y1yl0ccy">Expand</title>
+	<path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+			</span>
+			<span class="js-collapse-comment-content inline-block align-middle"></span>
+		</summary>
+<div id="comment-node-1021116" class="
+		comment single-comment-node
+		
+		root
+		comment--deep-0
+		
+	" data-comment-id="1021116" data-path="/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc/comments/262di" data-comment-author-id="477355" data-content-user-id="477355">
+	<a name="comment-262di" style="position: absolute; top: -8px;">&nbsp;</a>
+	
+<div class="comment__inner">
+	<a href="https://dev.to/slocaly" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+	<img class="crayons-avatar__image" width="32" height="32" src="https://res.cloudinary.com/practicaldev/image/fetch/s--1MskpVMC--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/477355/d0327776-136c-4d4f-b897-be6394984756.jpg" alt="slocaly profile image" loading="lazy">
+</a>
+
+
+<div class="inner-comment comment__details">
+	<div class="comment__content crayons-card">
+			
+
+
+			<div class="comment__header">
+<a href="https://dev.to/slocaly" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+	<span class="js-comment-username">Audart Lucas</span>
+</a>
+<div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+	<button id="comment-profile-preview-trigger-1021116" aria-controls="comment-profile-preview-content-1021116" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Audart Lucas profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+		Audart Lucas
+	</button>
+	<div id="comment-profile-preview-content-1021116" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown" style="--card-color: #121212; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+	<div class="gap-4 grid">
+			<div class="-mt-4">
+<a href="/slocaly" class="flex">
+	<span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+		<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--EIMaef3q--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/477355/d0327776-136c-4d4f-b897-be6394984756.jpg" class="crayons-avatar__image" alt="" loading="lazy">
+	</span>
+	<span class="crayons-link crayons-subtitle-2 mt-5">Audart Lucas</span>
+</a>
+</div>
+
+<div class="print-hidden">
+<button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:477355,&quot;name&quot;:&quot;Audart Lucas&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Audart Lucas" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+<div class="color-base-70">
+	I'm a French web developper working for Zenika, Javascript lover and Treasurer of LaCruz Association.
+</div>
+
+<div class="user-metadata-details">
+	<ul class="user-metadata-details-inner">
+			<li>
+				<div class="key">
+					Email
+				</div>
+				<div class="value">
+					<a href="mailto:lucasaudart@gmail.com">lucasaudart@gmail.com</a>
+				</div>
+			</li>
+			<li>
+				<div class="key">
+					Location
+				</div>
+				<div class="value">
+					Lyon, France
+				</div>
+			</li>
+				<li>
+					<div class="key">
+						Education
+					</div>
+					<div class="value">
+						University Claude Bernard Lyon 1 - France
+					</div>
+				</li>
+				<li>
+					<div class="key">
+						Work
+					</div>
+					<div class="value">
+						Web consultant at Zenika
+					</div>
+				</li>
+		<li>
+			<div class="key">
+				Joined
+			</div>
+			<div class="value">
+				<time datetime="2020-09-29T13:21:16Z" class="date" title="mardi 29 septembre 2020 à 15:21:16">29 sept. 2020</time>
+			</div>
+		</li>
+	</ul>
+</div>
+
+	</div>
+</div>
+
+</div>
+
+<span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc#comment-262di" class="comment-date crayons-link crayons-link--secondary fs-s">
+<time datetime="2023-04-12T10:00:08Z" class="date-no-year" title="mercredi 12 avril 2023 à 12:00:08">12 avr.</time>
+
+</a>
+
+
+<div class="comment__dropdown" data-tracking-name="comment_dropdown">
+	<button id="comment-dropdown-trigger-1021116" aria-controls="comment-dropdown-1021116" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="adi3y4rag8i01j2zryn9vvkt9pp6ecip" class="crayons-icon pointer-events-none"><title id="adi3y4rag8i01j2zryn9vvkt9pp6ecip">Dropdown menu</title>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+	</button>
+	<div id="comment-dropdown-1021116" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+		<ul class="m-0">
+			<li><a href="https://dev.to/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc#comment-262di" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Audart Lucas's comment" data-no-instant="">Copy link</a></li>
+			<li class="comment-actions hidden" data-user-id="477355" data-action="settings-button" data-path="https://dev.to/slocaly/comment/262di/settings" aria-label="Go to Audart Lucas's comment settings"></li>
+			<li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="668723" data-user-id="477355">
+					<button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="1021116" data-comment-url="https://dev.to/slocaly/comment/262di" aria-label="Hide Audart Lucas's comment">
+						Hide
+					</button>
+			</li>
+			<li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/slocaly/comment/262di/mod" aria-label="Moderate Audart Lucas's comment"></li>
+			<li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/slocaly/comment/262di" aria-label="Report Audart Lucas's comment as abusive or violating our code of conduct and/or terms and conditions"><a href="/report-abuse?url=https://dev.to/slocaly/comment/262di" class="crayons-link crayons-link--block">Report abuse</a></li>
+			<li class="current-user-actions"></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+			<div class="
+					comment__body
+					text-styles
+					text-styles--secondary
+					body
+					
+					
+				">
+				<p>What an amazing looking release, can't wait to try relational databases directly in Appwrite </p>
+
+<p>(and the .env variable import for function is a long time awaited one for me !)</p>
+
+
+			</div>
+
+	</div>
+
+	<footer class="comment__footer print-hidden">
+<button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-1021116" data-comment-id="1021116" aria-label="like" data-tracking-name="comment_heart_button" aria-pressed="false">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ac6e19pljqnl8y1dhx8adnisbfgpqqr5" class="crayons-icon reaction-icon not-reacted"><title id="ac6e19pljqnl8y1dhx8adnisbfgpqqr5">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ake8qjzahytt8imhrngpe6mfs1qg6e7r" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="ake8qjzahytt8imhrngpe6mfs1qg6e7r">Like comment: </title>
+	<path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+	<span class="reactions-count" id="reactions-count-1021116">1</span><span class="reactions-label hidden m:inline-block">&nbsp;like</span>
+	<span data-testid="tooltip" class="crayons-tooltip__content">
+		Like
+	</span>
+</button>
+
+		<a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="#/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc/comments/new/262di" data-comment-id="1021116" data-path="/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc/comments/262di" data-tracking-name="comment_reply_button" data-testid="reply-button-1021116" rel="nofollow">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a9sikiordm233stzhtf8rov2sjd3ira3" class="crayons-icon reaction-icon not-reacted"><title id="a9sikiordm233stzhtf8rov2sjd3ira3">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+			<span class="hidden m:inline-block">Reply</span>
+		</a>
+
+</footer>
+
+</div>
+</div>
+
+
+</div>
+	</details>
+
+
+			</div>
+		</div>
+
+		<div class="align-center">
+
+
+<nav class="fs-s align-center block" aria-label="Conduct controls">
+<a href="/code-of-conduct" class="crayons-link crayons-link--secondary">Code of Conduct</a>
+<span class="opacity-25 px-2" role="presentation">•</span>
+<a href="/report-abuse" class="crayons-link crayons-link--secondary">Report abuse</a>
+</nav>
+
+</div>
+
+</section>
+<div id="hide-comments-modal" class="hidden">
+<form id="hide-comments-modal__form" class="hide-comments-modal__form" data-type="json" action="/comments/hide" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="tFzDCbgMaoU3YHDeXH-EPhKQJappvEH4MGsXmzB3KAgUY_anVAjoDWCdgCVVuZUKEZa_znJ_bjGv-9rKmwiAzg" autocomplete="off">
+	<div class="hide-comments-modal__content">
+		<p class="pb-2">
+			Are you sure you want to hide this comment? It will become hidden in your post, but will still be visible via the comment's <a id="hide-comments-modal__comment-permalink" href="#">permalink</a>.
+		</p>
+		<label class="crayons-field crayons-field--checkbox my-2">
+			<input name="hide_children" type="hidden" value="0" autocomplete="off"><input class="hide_children crayons-checkbox" type="checkbox" value="1" name="hide_children" id="hide_children">
+			<p class="crayons-field__label">Hide child comments as well</p>
+		</label>
+		<p class="pb-4 pt-2">
+			<button type="submit" class="crayons-btn">
+				Confirm
+			</button>
+		</p>
+	</div>
+</form>  <p class="fs-s color-base-60">For further actions, you may consider blocking this person and/or <a id="hide-comments-modal__report-link" href="/report-abuse">reporting abuse</a></p>
+</div>
+
+
+				<div class="pb-4 crayons-layout__comments-display-ad">
+					<div class="crayons-card crayons-card--secondary crayons-sponsorship" data-display-unit="" data-id="592" data-category-click="click" data-category-impression="impression" data-context-type="article" data-type-of="in_house">
+<div class="crayons-sponsorship__header relative">
+		<div class="crayons-sponsorship__title">DEV Community</div>
+
+	<button id="sponsorship-dropdown-trigger-592" aria-controls="sponsorship-dropdown-592" aria-expanded="false" aria-haspopup="true" class="dropBtn crayons-sponsorship__dropdown crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon" aria-label="Toggle dropdown menu" data-initialized="true">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a740qrv0z25ucx2mjtxlro8reamx4ypy" class="crayons-icon pointer-events-none"><title id="a740qrv0z25ucx2mjtxlro8reamx4ypy">Dropdown menu</title>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+	</button>
+
+	<div id="sponsorship-dropdown-592" class="crayons-dropdown right-0">
+		<ul class="list-none m-0">
+				<li>
+					<a class="crayons-link crayons-link--block" href="/billboards">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+	<path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+						What's a billboard?
+					</a>
+				</li>
+			<li>
+				<a class="crayons-link crayons-link--block" href="/settings/customization#sponsors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+	<path d="M3.34 16.9999C2.91727 16.2689 2.58866 15.4874 2.362 14.6739C2.85531 14.423 3.26959 14.0406 3.55903 13.5688C3.84846 13.0971 4.00176 12.5545 4.00197 12.0011C4.00218 11.4476 3.84928 10.9049 3.5602 10.4329C3.27112 9.961 2.85712 9.57821 2.364 9.32694C2.81604 7.69243 3.67673 6.1999 4.865 4.98994C5.32909 5.29167 5.86762 5.45911 6.42098 5.47373C6.97434 5.48834 7.52095 5.34958 8.00033 5.07278C8.47971 4.79598 8.87315 4.39194 9.13713 3.90539C9.4011 3.41883 9.52531 2.86872 9.496 2.31594C11.1381 1.89157 12.8612 1.89226 14.503 2.31795C14.474 2.87071 14.5984 3.42073 14.8626 3.90715C15.1268 4.39357 15.5204 4.79742 15.9998 5.07401C16.4793 5.35059 17.0259 5.48913 17.5793 5.4743C18.1326 5.45946 18.671 5.29183 19.135 4.98994C19.714 5.57994 20.228 6.25095 20.66 6.99995C21.093 7.74895 21.417 8.52995 21.638 9.32595C21.1447 9.57685 20.7304 9.95932 20.441 10.4311C20.1515 10.9028 19.9982 11.4454 19.998 11.9988C19.9978 12.5523 20.1507 13.095 20.4398 13.5669C20.7289 14.0389 21.1429 14.4217 21.636 14.6729C21.184 16.3075 20.3233 17.8 19.135 19.0099C18.6709 18.7082 18.1324 18.5408 17.579 18.5262C17.0257 18.5115 16.479 18.6503 15.9997 18.9271C15.5203 19.2039 15.1268 19.6079 14.8629 20.0945C14.5989 20.5811 14.4747 21.1312 14.504 21.6839C12.8619 22.1083 11.1388 22.1076 9.497 21.6819C9.52605 21.1292 9.4016 20.5792 9.13742 20.0927C8.87324 19.6063 8.47964 19.2025 8.00017 18.9259C7.5207 18.6493 6.97405 18.5108 6.42073 18.5256C5.8674 18.5404 5.32896 18.7081 4.865 19.0099C4.27399 18.4069 3.76159 17.7315 3.34 16.9999ZM9 17.1959C10.0656 17.8106 10.8668 18.797 11.25 19.9659C11.749 20.0129 12.25 20.0139 12.749 19.9669C13.1324 18.7978 13.934 17.8114 15 17.1969C16.0652 16.5806 17.3205 16.3794 18.525 16.6319C18.815 16.2239 19.065 15.7889 19.273 15.3339C18.4524 14.4174 17.9991 13.2302 18 11.9999C18 10.7399 18.47 9.56295 19.273 8.66595C19.0635 8.21109 18.8125 7.77658 18.523 7.36795C17.3193 7.62025 16.0648 7.41942 15 6.80395C13.9344 6.18932 13.1332 5.20293 12.75 4.03394C12.251 3.98694 11.75 3.98594 11.251 4.03294C10.8676 5.20209 10.066 6.1885 9 6.80295C7.93478 7.41926 6.67948 7.62046 5.475 7.36795C5.18556 7.77623 4.93513 8.21081 4.727 8.66595C5.54757 9.5825 6.00088 10.7697 6 11.9999C6 13.2599 5.53 14.4369 4.727 15.3339C4.93647 15.7888 5.18754 16.2233 5.477 16.6319C6.68072 16.3796 7.93521 16.5805 9 17.1959ZM12 14.9999C11.2044 14.9999 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 11.9999C9 11.2043 9.31607 10.4412 9.87868 9.87862C10.4413 9.31602 11.2044 8.99995 12 8.99995C12.7956 8.99995 13.5587 9.31602 14.1213 9.87862C14.6839 10.4412 15 11.2043 15 11.9999C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 14.9999 12 14.9999ZM12 12.9999C12.2652 12.9999 12.5196 12.8946 12.7071 12.7071C12.8946 12.5195 13 12.2652 13 11.9999C13 11.7347 12.8946 11.4804 12.7071 11.2928C12.5196 11.1053 12.2652 10.9999 12 10.9999C11.7348 10.9999 11.4804 11.1053 11.2929 11.2928C11.1054 11.4804 11 11.7347 11 11.9999C11 12.2652 11.1054 12.5195 11.2929 12.7071C11.4804 12.8946 11.7348 12.9999 12 12.9999Z" fill="black"></path>
+</svg>
+
+					Manage preferences
+				</a>
+			</li>
+			<hr>
+			<li>
+				<a class="crayons-link crayons-link--block" href="/report-abuse?billboard=592">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 17" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+<path d="M2.16667 11.3333V16.3333H0.5V0.5H8.31833C8.47305 0.500083 8.62469 0.543236 8.75627 0.624627C8.88785 0.706018 8.99417 0.822433 9.06333 0.960833L9.66667 2.16667H14.6667C14.8877 2.16667 15.0996 2.25446 15.2559 2.41074C15.4122 2.56703 15.5 2.77899 15.5 3V12.1667C15.5 12.3877 15.4122 12.5996 15.2559 12.7559C15.0996 12.9122 14.8877 13 14.6667 13H9.34833C9.19361 12.9999 9.04197 12.9568 8.91039 12.8754C8.77882 12.794 8.67249 12.6776 8.60333 12.5392L8 11.3333H2.16667ZM2.16667 2.16667V9.66667H9.03L9.86333 11.3333H13.8333V3.83333H8.63667L7.80333 2.16667H2.16667Z" fill="#404040"></path>
+</svg>
+
+					Report billboard
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="p-1 pt-3 text-styles text-styles--display-ad">
+	<h2>  <a href="#50-cli-tools-you-cant-live-without" class="anchor">  </a>  50 CLI Tools You Can't Live Without</h2><p><a href="https://dev.to/lissy93/cli-tools-you-cant-live-without-57f6"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--eVza2yuC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--XDmbmZKz--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880/https://i.ibb.co/6Z960jq/zoxide.gif" width="880" height="470" loading="lazy"></a></p><p><a href="https://dev.to/lissy93/cli-tools-you-cant-live-without-57f6">&gt;&gt; Check out this classic DEV post &lt;&lt;</a></p>
+</div>
+</div>
+
+				</div>
+
+				<section class="crayons-card crayons-card--secondary text-padding mb-4 print-hidden" id="bottom-content-read-next">
+	<h2 class="crayons-subtitle-1">Read next</h2>
+		<a href="/kuldeeptarapara/raisedbutton-deprecation-and-migration-guide-with-an-example-4ogo" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--O_mHuZJO--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rmf66xl8z8s01lelxo16.jpg" class="crayons-link mt-6 block">
+			<div class="flex items-center">
+				<span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+						<img loading="lazy" alt="kuldeeptarapara profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--0KxBpQh4--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/770056/06feb277-54f5-482f-be53-0a26057b1957.jpg">
+				</span>
+				<div>
+					<h3 class="fs-xl mb-0 lh-tight">RaisedButton Deprecation and Migration Guide With An Example</h3>
+					<p class="opacity-75 pt-1">
+						Kuldeep Tarapara - <time datetime="2023-03-23T10:36:12Z">Mar 23</time>
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="/alvaromontoro/drawing-an-egg-with-css-m17" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--OTWApGwp--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1f0af0i7qsywkmm19jnr.png" class="crayons-link mt-6 block">
+			<div class="flex items-center">
+				<span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+						<img loading="lazy" alt="alvaromontoro profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--9c845Luo--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/161327/2ff05281-db58-4dcb-946a-4b679e4a266b.jpeg">
+				</span>
+				<div>
+					<h3 class="fs-xl mb-0 lh-tight">Drawing an Egg with CSS</h3>
+					<p class="opacity-75 pt-1">
+						Alvaro Montoro - <time datetime="2023-04-08T04:56:22Z">Apr 8</time>
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="/adeleyeayodeji/php-search-box-with-mysql-and-ajax-jquery-3ba0" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--vxh8gOKj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/59bmnmqssxdutli07qed.png" class="crayons-link mt-6 block">
+			<div class="flex items-center">
+				<span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+						<img loading="lazy" alt="adeleyeayodeji profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--YSjENdvT--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/455472/1102b6e7-efc2-401e-b350-aa312b968659.png">
+				</span>
+				<div>
+					<h3 class="fs-xl mb-0 lh-tight">PHP Search Box with MYSQL and AJAX JQuery</h3>
+					<p class="opacity-75 pt-1">
+						Adeleye Ayodeji - <time datetime="2023-03-18T10:44:47Z">Mar 18</time>
+					</p>
+				</div>
+			</div>
+		</a>
+		<a href="/0xmiguel/como-chat-gpt-4-me-esta-convirtiendo-en-un-mejor-ingeniero-de-software-o-10x-4mc" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--ZchBB-uY--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6542nnqlx162rcs5j7js.png" class="crayons-link mt-6 block">
+			<div class="flex items-center">
+				<span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+						<img loading="lazy" alt="0xmiguel profile image" class="crayons-avatar__image" width="100" height="100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Olkg5IO1--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/767433/871b4231-f068-401d-8595-23b05b5ef3df.jpeg">
+				</span>
+				<div>
+					<h3 class="fs-xl mb-0 lh-tight">Cómo Chat GPT-4 me está convirtiendo en un mejor ingeniero de software o "10x"</h3>
+					<p class="opacity-75 pt-1">
+						0xMiguel - <time datetime="2023-03-17T19:11:47Z">Mar 17</time>
+					</p>
+				</div>
+			</div>
+		</a>
+</section>
+
+	</div>
+</main>
+
+<aside class="crayons-layout__sidebar-right" aria-label="Author details">
+	<div class="crayons-article-sticky grid gap-4 break-word" id="article-show-primary-sticky-nav">
+<div class="crayons-card crayons-card--secondary branded-7 p-4 pt-0 gap-4 grid" style="border-top-color: #d32859;">
+	<div class="-mt-4">
+<a href="/appwrite" class="flex">
+	<span class="crayons-logo crayons-logo--xl  mr-2 shrink-0">
+		<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Sd_6xLxx--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2225/18b2c66e-fba2-4f4f-8196-8184c599b75d.png" class="crayons-logo__image" alt="" loading="lazy">
+	</span>
+	<span class="crayons-link crayons-subtitle-2 mt-5">Appwrite</span>
+</a>
+</div>
+
+<div class="print-hidden">
+<button name="button" type="button" data-info="{&quot;className&quot;:&quot;Organization&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:2225,&quot;name&quot;:&quot;Appwrite&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 showing" aria-label="Follow organization: Appwrite" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+<div class="color-base-70">
+	The 100% open-source Firebase alternative
+</div>
+
+
+</div>
+
+		<div class="crayons-card crayons-card--secondary">
+			<header class="crayons-card__header">
+				<h3 class="crayons-subtitle-2">
+					More from <a href="/appwrite">Appwrite</a>
+				</h3>
+			</header>
+			<div>
+					<a class="crayons-link crayons-link--contentful" href="/appwrite/simplify-your-data-management-with-relationships-11ma">
+						Simplify Your Data Management With Relationships
+						<div class="crayons-link__secondary -ml-1">
+								<span class="mr-1"><span class="opacity-50">#</span>opensource</span>
+								<span class="mr-1"><span class="opacity-50">#</span>programming</span>
+								<span class="mr-1"><span class="opacity-50">#</span>news</span>
+								<span class="mr-1"><span class="opacity-50">#</span>database</span>
+						</div>
+					</a>
+					<a class="crayons-link crayons-link--contentful" href="/appwrite/introducing-password-dictionary-in-appwrite-a-new-layer-of-security-2356">
+						Introducing Password Dictionary In Appwrite: A New Layer Of Security
+						<div class="crayons-link__secondary -ml-1">
+								<span class="mr-1"><span class="opacity-50">#</span>opensource</span>
+								<span class="mr-1"><span class="opacity-50">#</span>programming</span>
+								<span class="mr-1"><span class="opacity-50">#</span>news</span>
+						</div>
+					</a>
+					<a class="crayons-link crayons-link--contentful" href="/appwrite/our-ai-powered-techcrunch-clone-went-viral-this-is-how-we-built-it-495d">
+						Our AI-Powered TechCrunch Clone Went Viral, This Is How We Built It
+						<div class="crayons-link__secondary -ml-1">
+								<span class="mr-1"><span class="opacity-50">#</span>opensource</span>
+								<span class="mr-1"><span class="opacity-50">#</span>javascript</span>
+								<span class="mr-1"><span class="opacity-50">#</span>webdev</span>
+								<span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+						</div>
+					</a>
+			</div>
+		</div>
+</div>
+
+	<div class="crayons-article-sticky grid gap-4 break-word pt-4">
+		<div class="crayons-card crayons-card--secondary crayons-sponsorship" data-display-unit="" data-id="920" data-category-click="click" data-category-impression="impression" data-context-type="article" data-type-of="in_house">
+<div class="crayons-sponsorship__header relative">
+		<div class="crayons-sponsorship__title">DEV Community</div>
+
+	<button id="sponsorship-dropdown-trigger-920" aria-controls="sponsorship-dropdown-920" aria-expanded="false" aria-haspopup="true" class="dropBtn crayons-sponsorship__dropdown crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon" aria-label="Toggle dropdown menu" data-initialized="true">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a7b1i0uo9ug4ntq79y8sgp7x5ucr89mp" class="crayons-icon pointer-events-none"><title id="a7b1i0uo9ug4ntq79y8sgp7x5ucr89mp">Dropdown menu</title>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+	</button>
+
+	<div id="sponsorship-dropdown-920" class="crayons-dropdown right-0">
+		<ul class="list-none m-0">
+				<li>
+					<a class="crayons-link crayons-link--block" href="/billboards">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+	<path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
+</svg>
+
+						What's a billboard?
+					</a>
+				</li>
+			<li>
+				<a class="crayons-link crayons-link--block" href="/settings/customization#sponsors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+	<path d="M3.34 16.9999C2.91727 16.2689 2.58866 15.4874 2.362 14.6739C2.85531 14.423 3.26959 14.0406 3.55903 13.5688C3.84846 13.0971 4.00176 12.5545 4.00197 12.0011C4.00218 11.4476 3.84928 10.9049 3.5602 10.4329C3.27112 9.961 2.85712 9.57821 2.364 9.32694C2.81604 7.69243 3.67673 6.1999 4.865 4.98994C5.32909 5.29167 5.86762 5.45911 6.42098 5.47373C6.97434 5.48834 7.52095 5.34958 8.00033 5.07278C8.47971 4.79598 8.87315 4.39194 9.13713 3.90539C9.4011 3.41883 9.52531 2.86872 9.496 2.31594C11.1381 1.89157 12.8612 1.89226 14.503 2.31795C14.474 2.87071 14.5984 3.42073 14.8626 3.90715C15.1268 4.39357 15.5204 4.79742 15.9998 5.07401C16.4793 5.35059 17.0259 5.48913 17.5793 5.4743C18.1326 5.45946 18.671 5.29183 19.135 4.98994C19.714 5.57994 20.228 6.25095 20.66 6.99995C21.093 7.74895 21.417 8.52995 21.638 9.32595C21.1447 9.57685 20.7304 9.95932 20.441 10.4311C20.1515 10.9028 19.9982 11.4454 19.998 11.9988C19.9978 12.5523 20.1507 13.095 20.4398 13.5669C20.7289 14.0389 21.1429 14.4217 21.636 14.6729C21.184 16.3075 20.3233 17.8 19.135 19.0099C18.6709 18.7082 18.1324 18.5408 17.579 18.5262C17.0257 18.5115 16.479 18.6503 15.9997 18.9271C15.5203 19.2039 15.1268 19.6079 14.8629 20.0945C14.5989 20.5811 14.4747 21.1312 14.504 21.6839C12.8619 22.1083 11.1388 22.1076 9.497 21.6819C9.52605 21.1292 9.4016 20.5792 9.13742 20.0927C8.87324 19.6063 8.47964 19.2025 8.00017 18.9259C7.5207 18.6493 6.97405 18.5108 6.42073 18.5256C5.8674 18.5404 5.32896 18.7081 4.865 19.0099C4.27399 18.4069 3.76159 17.7315 3.34 16.9999ZM9 17.1959C10.0656 17.8106 10.8668 18.797 11.25 19.9659C11.749 20.0129 12.25 20.0139 12.749 19.9669C13.1324 18.7978 13.934 17.8114 15 17.1969C16.0652 16.5806 17.3205 16.3794 18.525 16.6319C18.815 16.2239 19.065 15.7889 19.273 15.3339C18.4524 14.4174 17.9991 13.2302 18 11.9999C18 10.7399 18.47 9.56295 19.273 8.66595C19.0635 8.21109 18.8125 7.77658 18.523 7.36795C17.3193 7.62025 16.0648 7.41942 15 6.80395C13.9344 6.18932 13.1332 5.20293 12.75 4.03394C12.251 3.98694 11.75 3.98594 11.251 4.03294C10.8676 5.20209 10.066 6.1885 9 6.80295C7.93478 7.41926 6.67948 7.62046 5.475 7.36795C5.18556 7.77623 4.93513 8.21081 4.727 8.66595C5.54757 9.5825 6.00088 10.7697 6 11.9999C6 13.2599 5.53 14.4369 4.727 15.3339C4.93647 15.7888 5.18754 16.2233 5.477 16.6319C6.68072 16.3796 7.93521 16.5805 9 17.1959ZM12 14.9999C11.2044 14.9999 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 11.9999C9 11.2043 9.31607 10.4412 9.87868 9.87862C10.4413 9.31602 11.2044 8.99995 12 8.99995C12.7956 8.99995 13.5587 9.31602 14.1213 9.87862C14.6839 10.4412 15 11.2043 15 11.9999C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 14.9999 12 14.9999ZM12 12.9999C12.2652 12.9999 12.5196 12.8946 12.7071 12.7071C12.8946 12.5195 13 12.2652 13 11.9999C13 11.7347 12.8946 11.4804 12.7071 11.2928C12.5196 11.1053 12.2652 10.9999 12 10.9999C11.7348 10.9999 11.4804 11.1053 11.2929 11.2928C11.1054 11.4804 11 11.7347 11 11.9999C11 12.2652 11.1054 12.5195 11.2929 12.7071C11.4804 12.8946 11.7348 12.9999 12 12.9999Z" fill="black"></path>
+</svg>
+
+					Manage preferences
+				</a>
+			</li>
+			<hr>
+			<li>
+				<a class="crayons-link crayons-link--block" href="/report-abuse?billboard=920">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 17" fill="none" role="img" aria-hidden="true" class="crayons-icon c-btn__icon">
+<path d="M2.16667 11.3333V16.3333H0.5V0.5H8.31833C8.47305 0.500083 8.62469 0.543236 8.75627 0.624627C8.88785 0.706018 8.99417 0.822433 9.06333 0.960833L9.66667 2.16667H14.6667C14.8877 2.16667 15.0996 2.25446 15.2559 2.41074C15.4122 2.56703 15.5 2.77899 15.5 3V12.1667C15.5 12.3877 15.4122 12.5996 15.2559 12.7559C15.0996 12.9122 14.8877 13 14.6667 13H9.34833C9.19361 12.9999 9.04197 12.9568 8.91039 12.8754C8.77882 12.794 8.67249 12.6776 8.60333 12.5392L8 11.3333H2.16667ZM2.16667 2.16667V9.66667H9.03L9.86333 11.3333H13.8333V3.83333H8.63667L7.80333 2.16667H2.16667Z" fill="#404040"></path>
+</svg>
+
+					Report billboard
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="p-1 pt-3 text-styles text-styles--display-ad">
+	<h2>  <a href="#life-is-too-short-to-browse-without-dark-mode" class="anchor">  </a>  🌚 Life is too short to browse without <a href="https://dev.to/settings/customization">dark mode</a>
+</h2><p>You can customize your theme, font, and more <a href="https://dev.to/enter?state=new-user">when you are signed in</a>.</p>
+</div>
+</div>
+
+	</div>
+
+</aside>
+</div>
+
+
+<div class="mod-actions-menu print-hidden"></div>
+<div data-testid="unpublish-post-modal-container" class="unpublish-post-modal-container hidden"></div>
+<div id="suspend-modal-content" class="hidden">
+<p>
+	Once suspended, appwrite will not be able to comment or publish posts until their suspension is removed.
+</p>
+
+<div class="crayons-field mt-4">
+	<label for="suspend-reason-userid-668723" class="crayons-field__label">
+		Note:
+	</label>
+	<textarea id="suspend-reason-userid-668723" rows="4" cols="70" placeholder="Reason for suspension" class="crayons-textfield" aria-describedby="suspension-reason-error" required=""></textarea>
+	<p id="suspension-reason-error" data-testid="suspension-reason-error" class="suspend-reason-error crayons-field__description" style="color: red;" aria-live="assertive">
+	</p>
+</div>
+<div class="mt-4">
+	<button id="submit-user-suspend-btn" class="c-btn c-btn--primary c-btn--destructive" data-btn-action="suspend" data-reason-selector="#suspend-reason-userid-668723" data-user-id="668723" data-username="appwrite">
+		Submit &amp; Suspend
+	</button>
+</div>
+</div>
+
+<div id="unsuspend-modal-content" class="hidden">
+<p>
+	Once unsuspended, appwrite will be able to comment and publish posts again.
+</p>
+
+<div class="crayons-field mt-4">
+	<label for="unsuspend-reason-userid-668723" class="crayons-field__label">
+		Note:
+	</label>
+	<textarea id="unsuspend-reason-userid-668723" rows="4" cols="70" placeholder="Reason for unsuspension" class="crayons-textfield" aria-describedby="unsuspension-reason-error" required=""></textarea>
+	<p id="unsuspension-reason-error" data-testid="unsuspension-reason-error" class="unsuspend-reason-error crayons-field__description" style="color: red;" aria-live="assertive">
+	</p>
+</div>
+<div class="mt-4">
+	<button id="submit-user-unsuspend-btn" class="c-btn c-btn--primary" data-btn-action="unsuspend" data-reason-selector="#unsuspend-reason-userid-668723" data-user-id="668723" data-username="appwrite">
+		Submit &amp; Unsuspend
+	</button>
+</div>
+</div>
+
+<div id="unpublish-all-posts" class="hidden">
+<p>
+	Once unpublished, all posts by appwrite will become hidden and only accessible to themselves.
+</p>
+<p class="mt-2">
+	If appwrite is not suspended, they can still re-publish their posts from their dashboard.
+</p>
+<p class="mt-2"><label for="note_content">Note:</label><textarea name="note[content]" id="note_content" class="crayons-textfield note_content" placeholder="Note text"></textarea></p>
+<div class="mt-4">
+	<button id="unpublish-all-posts-submit-btn" class="c-btn c-btn--destructive c-btn--primary" data-user-id="668723">
+		Unpublish all posts
+	</button>
+</div>
+</div>
+
+<div id="unpublish-post-modal" class="hidden">
+<p>
+	Once unpublished, this post will become invisible to the public and only accessible to Matej Bačo.
+</p>
+<p>They can still re-publish the post if they are not suspended.</p>
+<div class="mt-4">
+	<button destructive="" variant="primary" class="c-btn c-btn--primary c-btn--destructive" id="confirm-unpublish-post-action">
+		Unpublish Post
+	</button>
+</div>
+</div>
+
+<div id="flag-user-modal-content" class="hidden">
+<p>
+	Thanks for keeping DEV Community safe. Here is what you can do to flag appwrite:
+</p>
+
+<div class="crayons-field crayons-field--radio mt-4">
+	<input type="radio" id="flag-user-radio-input" name="flag-user-radio-input" class="crayons-radio" data-reactable-id="668723" data-category="vomit" data-reactable-type="User">
+	<label for="flag-user-radio-input" class="crayons-field__label">
+		Make all posts by appwrite less visible
+		<p class="crayons-field__description">
+			appwrite consistently posts content that violates DEV Community's
+			code of conduct because it is harassing, offensive or spammy.
+		</p>
+	</label>
+</div>
+
+<div class="mt-4">
+	<a href="javascript:void(0);" id="report-inappropriate-content" data-report-abuse-link="/report-abuse?url=https://dev.to/appwrite/join-celebrations-appwrite-13-ships-relationships-57fc">
+		Report other inappropriate conduct
+	</a>
+</div>
+
+<div class="mt-6">
+	<p id="unselected-radio-error" data-testid="unselected-radio-error" class="crayons-field__description mb-4" style="color: red;" aria-live="assertive">
+	</p>
+	<button id="confirm-flag-user-action" class="c-btn c-btn--primary c-btn--destructive" data-category="vomit" data-reactable-type="User" data-user-id="668723" data-username="appwrite">
+		Confirm Flag
+	</button>
+</div>
+</div>
+
+<div id="unflag-user-modal-content" class="hidden">
+<p>
+	Unflagging appwrite will restore default visibility to their posts.
+</p>
+
+<div class="mt-6">
+	<button id="confirm-unflag-user-action" class="c-btn c-btn--primary" data-category="vomit" data-reactable-type="User" data-user-id="668723" data-username="appwrite">
+		Confirm Unflag
+	</button>
+</div>
+</div>
+
+
+<div class="fullscreen-code js-fullscreen-code"></div>
+<script src="https://dev.to/packs/js/runtime~followButtons-728c603f2dc8755ce211.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/6-b93c1529963bca9369db.chunk.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/followButtons-b70c2c080f62af0daafb.chunk.js" defer="defer"></script>
+
+<script>
+	var waitingOnPodcast = setInterval(function() {
+if (typeof initializePodcastPlayback !== 'undefined') {
+	initializePodcastPlayback();
+	clearInterval(waitingOnPodcast);
+}
+}, 1);
+
+	if (document.head.querySelector('meta[name="user-signed-in"][content="true"]')) {
+function displayPollResults(json) {
+	var totalVotes = json.voting_data.votes_count;
+	json.voting_data.votes_distribution.forEach(function(point) {
+		var pollOptionItem = document.getElementById('poll_option_list_item_'+point[0]);
+		var optionText = document.getElementById('poll_option_label_'+point[0]).textContent;
+		if (json.user_vote_poll_option_id === point[0]) {
+			var votedClass = 'optionvotedfor'
+		} else {
+			var votedClass = 'optionnotvotedfor'
+		}
+		if (totalVotes === 0) {
+			var percent = 0;
+		} else {
+			var percent = (point[1]/totalVotes)*100;
+		}
+		var roundedPercent = Math.round( percent * 10 ) / 10
+		var percentFromRight = (100-roundedPercent)
+		var html = '<span><span class="ltag-votepercent ltag-'+votedClass+'" style="right:'+percentFromRight+'%"></span>        <span class="ltag-votepercenttext">'+optionText+' — '+roundedPercent+'%</span></span>';
+		pollOptionItem.innerHTML = html;
+		pollOptionItem.classList.add('already-voted')
+		document.getElementById('showmethemoney-'+json.poll_id).innerHTML = '<span class="ltag-voting-results-count">'+totalVotes+' total votes</span>';
+	})
+}
+
+var polls = document.getElementsByClassName('ltag-poll');
+for (var i = 0; i < polls.length; i += 1) {
+	var poll = polls[i]
+	var pollId = poll.dataset.pollId
+	window.fetch('/poll_votes/'+pollId)
+	.then(function(response){
+		response.json().then(
+			function(json) {
+				if (json.voted) {
+					displayPollResults(json)
+				} else {
+					var els = document.getElementById('poll_'+json.poll_id).getElementsByClassName('ltag-polloption');
+
+					for (i = 0; i < els.length; i += 1) {
+						els[i].addEventListener('click', function(e) {
+							var tokenMeta = document.querySelector("meta[name='csrf-token']")
+							if (!tokenMeta) {
+								alert('Whoops. There was an error. Your vote was not counted. Try refreshing the page.')
+								return
+							}
+							var csrfToken = tokenMeta.getAttribute('content')
+							var optionId = e.target.dataset.optionId
+							window.fetch('/poll_votes', {
+								method: 'POST',
+								headers: {
+									'X-CSRF-Token': csrfToken,
+									'Content-Type': 'application/json',
+								},
+								body: JSON.stringify({poll_vote: { poll_option_id: optionId } }),
+								credentials: 'same-origin',
+							}).then(function(response){
+								response.json().then(function(j){displayPollResults(j)})
+							})
+						});
+					}
+
+					document.getElementById('showmethemoney-'+json.poll_id).addEventListener('click', function() {
+						pollId = this.dataset.pollId
+						window.fetch('/poll_skips', {
+							method: 'POST',
+							headers: {
+								'X-CSRF-Token': csrfToken,
+								'Content-Type': 'application/json',
+							},
+							body: JSON.stringify({poll_skip: {poll_id: pollId }}),
+							credentials: 'same-origin',
+						}).then(function(response){
+							response.json().then(function(j){displayPollResults(j)})
+						})
+					});
+				}
+			}
+		)
+	})
+}
+} else {
+	var els = document.getElementsByClassName('ltag-poll')
+	for (i = 0; i < els.length; i += 1) {
+		els[i].onclick = function(e) {
+			if (typeof showLoginModal !== "undefined") {
+				showLoginModal();
+			}
+		}
+	}
+}
+
+	function activateRunkitTags() {
+if (!areAnyRunkitTagsPresent())
+	return
+
+var checkRunkit = setInterval(function() {
+	try {
+		dynamicallyLoadRunkitLibrary()
+
+		if (typeof(RunKit) === 'undefined') {
+			return
+		}
+
+		replaceTagContentsWithRunkitWidget()
+		clearInterval(checkRunkit);
+	} catch(e) {
+		console.error(e);
+		clearInterval(checkRunkit);
+	}
+}, 200);
+}
+
+function isRunkitTagAlreadyActive(runkitTag) {
+return runkitTag.querySelector("iframe") !== null;
+};
+
+function areAnyRunkitTagsPresent() {
+var presentRunkitTags = document.getElementsByClassName("runkit-element");
+
+return presentRunkitTags.length > 0
+}
+
+function replaceTagContentsWithRunkitWidget() {
+var targets = document.getElementsByClassName("runkit-element");
+for (var i = 0; i < targets.length; i++) {
+	if (isRunkitTagAlreadyActive(targets[i])) {
+		continue;
+	}
+
+	var wrapperContent = targets[i].textContent;
+	if (/^(<iframe src)/.test(wrapperContent) === false) {
+		if (targets[i].children.length > 0) {
+			var preamble = targets[i].children[0].textContent;
+			var content = targets[i].children[1].textContent;
+			targets[i].innerHTML = "";
+			var notebook = RunKit.createNotebook({
+				element: targets[i],
+				source: content,
+				preamble: preamble
+			});
+		}
+	}
+}
+};
+
+function dynamicallyLoadRunkitLibrary() {
+if (typeof(dynamicallyLoadScript) === "undefined")
+	return
+
+dynamicallyLoadScript("//embed.runkit.com")
+}
+
+activateRunkitTags();
+
+	var videoPreviews = document.getElementsByClassName("ltag__twitter-tweet__media__video-wrapper");
+[].forEach.call(videoPreviews, function(el) {
+el.onclick = function(e) {
+	var divHeight = el.offsetHeight;
+	el.style.maxHeight = divHeight + "px";
+	el.getElementsByClassName("ltag__twitter-tweet__media--video-preview")[0].style.display = "none";
+	el.getElementsByClassName("ltag__twitter-tweet__video")[0].style.display = "block";
+	el.getElementsByTagName("video")[0].play();
+}
+});
+var tweets = document.getElementsByClassName("ltag__twitter-tweet__main");
+[].forEach.call(tweets, function(tweet){
+tweet.onclick = function(e) {
+	if (e.target.nodeName == "A" || e.target.parentElement.nodeName == "A") {
+		return;
+	}
+	window.open(tweet.dataset.url,"_blank");
+}
+});
+
+</script>
+
+	
+</div>
+</div>
+	
+<footer class="crayons-footer print-hidden">
+<div id="footer-container" class="crayons-footer__container">
+	<p class="fs-s crayons-footer__description">
+		<a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+	</p>
+
+	<ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="">
+			<li class="footer__nav-link flex items-center">
+	<a href="/">
+		Home
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/listings">
+		Listings
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/pod">
+		Podcasts
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/videos">
+		Videos
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/tags">
+		Tags
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/faq">
+		FAQ
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="https://shop.forem.com">
+		Forem Shop
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/sponsorships">
+		Sponsors
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/about">
+		About
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/contact">
+		Contact
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/guides">
+		Guides
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/software-comparisons">
+		Software comparisons
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+
+	</ul>
+
+	<ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="">
+			<li class="footer__nav-link flex items-center">
+	<a href="/code-of-conduct">
+		Code of Conduct
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/privacy">
+		Privacy Policy
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+<li class="footer__nav-link flex items-center">
+	<a href="/terms">
+		Terms of use
+	</a>
+	<span class="dot ml-2"></span>
+</li>
+
+	</ul>
+
+	<div class="fs-s">
+		<p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+		<p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">©</span> 2016 - 2023.</p>
+	</div>
+</div>
+</footer>
+<div id="snack-zone"><div class="hidden"></div></div>
+
+	<div id="global-signup-modal" class="authentication-modal hidden">
+<div class="authentication-modal__container">
+	<figure class="authentication-modal__image-container">
+		<img class="authentication-modal__image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" alt="DEV Community" loading="lazy">
+	</figure>
+	<div class="authentication-modal__content">
+		<p class="authentication-modal__description">
+				We're a place where coders share, stay up-to-date and grow their careers.
+		</p>
+	</div>
+	<div class="authentication-modal__actions">
+		<a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant="">
+			Log in
+		</a>
+		<a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant="">
+			Create account
+		</a>
+	</div>
+</div>
+</div>
+
+<script src="https://dev.to/packs/js/runtime~signupModalShortcuts-93dab95136372be7ac28.js" defer="defer"></script>
+<script src="https://dev.to/packs/js/signupModalShortcuts-2f61c6fb1d0fe5e0e012.chunk.js" defer="defer"></script>
+
+<div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+
+
+<script type="text/javascript" src="chrome-extension://fooolghllnmhmmndgjiamiiodkpenpbb/injectedPasswordless.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

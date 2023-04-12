@@ -7,4 +7,4 @@ gcloud functions deploy zummarizefunction \
 --trigger-http \
 --allow-unauthenticated \
 --env-vars-file .env.yaml \
---memory 1Gi
+--memory 4Gi

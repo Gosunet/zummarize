@@ -1,12 +1,9 @@
 import { Request, Response } from 'express'
 import { EnvelopedEvent, ReactionAddedEvent } from '@slack/bolt'
 import { Configuration, OpenAIApi } from 'openai'
-import { JSDOM } from 'jsdom'
-
+import { parseDevToArticle, parseMediumArticle, parseUnknownArticle } from "./parseArticle";
 // Require the Node Slack SDK package (github.com/slackapi/node-slack-sdk)
 import { WebClient, LogLevel } from '@slack/web-api'
-
-type Challenge = string
 
 declare global {
   namespace NodeJS {
@@ -99,43 +96,27 @@ export async function zummarizefunction(
   } else if (url.match('dev.to')) {
     article = parseDevToArticle(content)
   } else {
-    throw new Error('not implemented ' + url)
+    article = parseUnknownArticle(content)
   }
   console.log('Article get from content ')
 
-  const openAiResult = await openai.createCompletion({
-    model: 'text-davinci-003',
-    prompt: `Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${article}"`,
-    temperature: 0.7,
-    max_tokens: 144,
+  const openAiResult = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {"role": "system", "content": "Tu es un développeur confirmé."},
+      {"role": "user", "content": ` Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${article}"`},
+    ],
+    temperature: 0.7
     // stop: ['You:'],
   })
 
   const openApiMessage = openAiResult.data.choices.pop()
-  console.log('OPEN AI RESPONSE : ' + JSON.stringify(openApiMessage?.text))
+  console.log('OPEN AI RESPONSE : ' + JSON.stringify(openApiMessage?.message?.content))
 
   await client.chat.postMessage({
     channel: req.body.event.item.channel,
     thread_ts: req.body.event.item.ts,
-    text: openApiMessage?.text,
+    text: openApiMessage?.message?.content,
   })
   // Send an HTTP response
-}
-
-function parseDevToArticle(htmlAsString: string) {
-  return parseArticle(htmlAsString, 'article > div > div > p')
-}
-
-function parseMediumArticle(htmlAsString: string) {
-  return parseArticle(htmlAsString, 'section > div > div > p')
-}
-
-function parseArticle(htmlAsString: string, querySelector: string) {
-  const dom = new JSDOM(htmlAsString)
-  // dom.window.document.querySelector("p")?.textContent; // 'Hello world'
-  // const document = new DOMParser().parseFromString(htmlAsString, "text/html")
-  const document = dom.window.document
-  return Array.from(document.querySelectorAll(querySelector))
-    .map((b) => b.innerHTML.replace(/<[^>]*>/g, ''))
-    .join()
 }
