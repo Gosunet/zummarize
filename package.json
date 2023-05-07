@@ -9,7 +9,8 @@
     "lint": "tslint --project tsconfig.json",
     "cp-package": "cp package.json functions/",
     "build": "yarn clean && yarn lint && yarn tsc && yarn cp-package",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "gcp-build":""
   },
   "keywords": [
     "cloud",

@@ -49,12 +49,15 @@ describe('parseArticle', () => {
     })
 
     describe('when the content does not have an article tag', () => {
-      it('should throw', () => {
+      it('should parse', () => {
         const rawHtml = readFileSync(
           join(process.cwd(), '__tests__/fixtures/no-articles.html'),
           { encoding: 'utf8' },
         ).toString()
-        expect(() => parseUnknownArticle(rawHtml)).toThrowError()
+        const parsedArticle = parseUnknownArticle(rawHtml)
+        expect(parsedArticle).not.toContain('<div')
+        expect(parsedArticle).toBeDefined()
+        expect(parsedArticle.length).toBeGreaterThan(0)
       })
     })
   })

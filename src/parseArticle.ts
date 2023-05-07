@@ -10,10 +10,11 @@ export function parseMediumArticle(htmlAsString: string) {
 
 export function parseUnknownArticle(htmlAsString: string) {
 	const containsArticleTag = /<article/.exec(htmlAsString)
-	if(!containsArticleTag) {
-		throw new Error("No article tag in the content")
-	}
-  return parseArticle(htmlAsString, 'article p')
+	if(containsArticleTag) {
+    return parseArticle(htmlAsString, 'article p')
+	} else {
+    return parseArticle(htmlAsString, 'p')
+  }
 }
 
 export function parseArticle(htmlAsString: string, querySelector: string) {
