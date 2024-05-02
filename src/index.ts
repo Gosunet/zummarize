@@ -1,28 +1,22 @@
 import { Request, Response } from 'express'
 import { EnvelopedEvent, ReactionAddedEvent } from '@slack/bolt'
-import { Configuration, OpenAIApi } from 'openai'
-import {
-  parseDevToArticle,
-  parseMediumArticle,
-  parseUnknownArticle,
-} from './parseArticle'
 // Require the Node Slack SDK package (github.com/slackapi/node-slack-sdk)
 import { WebClient, LogLevel } from '@slack/web-api'
+import Groq from 'groq-sdk'
+import { parseMediumArticle, parseDevToArticle, parseUnknownArticle } from './parseArticle'
 
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
       SLACK_TOKEN: string
-      OPENAI_API_KEY: string
+      GROQ_API_KEY: string
     }
   }
 }
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-})
-
-const openai = new OpenAIApi(configuration)
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY
+});
 
 export async function computearticle(
   req: Request<never, void, EnvelopedEvent<ReactionAddedEvent>>,
@@ -100,32 +94,39 @@ export async function computearticle(
   }
   console.log('Article get from content ', req.body.event.event_ts)
 
-  const openAiResult = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: [
-      { role: 'system', content: 'Tu es un développeur confirmé. Et tu écris des tweets résumant ta veille technologique. Tu utilises des emojis.' },
+  const response = await groq.chat.completions.create({
+    "messages": [
       {
-        role: 'user',
-        content: `Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${article}"`
+        "role": "system",
+        "content": "Tu es un développeur confirmé. Et tu écris des tweets résumant ta veille technologique. Tu utilises des emojis."
+      },
+      {
+        "role": "user",
+        "content": `Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article : \n"${article}"`
           .replace(/\s+/gm, ' ')
           .split(' ')
           .slice(0, 2323)
           .join(' '),
-      },
+      }
     ],
-    temperature: 0.7,
-  })
+    "model": "llama3-8b-8192",
+    "temperature": 0.68,
+    "max_tokens": 2320,
+    "top_p": 1,
+    "stream": false,
+    "stop": null
+  });
 
-  const openApiMessage = openAiResult.data.choices.pop()
+  const groqResponse = response.choices.pop()
   console.log(
     req.body.event.event_ts,
-    'OPEN AI RESPONSE : ' + JSON.stringify(openApiMessage?.message?.content),
+    'GROQ RESPONSE : ' + JSON.stringify(groqResponse?.message?.content),
   )
 
   await client.chat.postMessage({
     channel: req.body.event.item.channel,
     thread_ts: req.body.event.item.ts,
-    text: openApiMessage?.message?.content,
+    text: groqResponse?.message?.content,
   })
 }
 

@@ -5,7 +5,6 @@ import {
 } from './parseArticle'
 import { readFileSync } from 'fs'
 import { join } from 'path'
-import { Configuration, OpenAIApi } from 'openai'
 import env from 'dotenv'
 
 env.config()
@@ -60,39 +59,5 @@ describe('parseArticle', () => {
         expect(parsedArticle.length).toBeGreaterThan(0)
       })
     })
-  })
-})
-
-describe('openAi call', () => {
-  it('should work', async () => {
-    const configuration = new Configuration({
-      apiKey: process.env.OPENAI_API_KEY,
-    })
-
-    const openai = new OpenAIApi(configuration)
-    const rawHtml = readFileSync(
-      join(process.cwd(), '__tests__/fixtures/info-q.html'),
-      { encoding: 'utf8' },
-    ).toString()
-    const parsedArticle = parseUnknownArticle(rawHtml)
-
-
-    await expect(
-      openai.createChatCompletion({
-        model: 'gpt-3.5-turbo',
-        messages: [
-          { role: 'system', content: 'Tu es un développeur confirmé.' },
-          {
-            role: 'user',
-            content: `Peux tu me donner un tweet valide en français limité à 100 caractères espaces inclus résumant cet article :\n"${parsedArticle}"`
-							.replace(/\s+/gm, ' ')
-              .split(' ')
-              .slice(0, 2323)
-              .join(' '),
-          },
-        ],
-        temperature: 0.7,
-      }),
-    ).resolves.toBeDefined()
   })
 })
